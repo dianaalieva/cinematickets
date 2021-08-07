@@ -36,11 +36,11 @@
         <button>RU</button>
       </div>
       <nav>
-        <a href="Почему мы" target="_name">EVENT DETAILS</a>
-        <a href="Выберите фильм" target="_name">SPEAKERS</a>
-        <a href="Товары" target="_name">SPONSORS</a>
-        <a href="Отзывы" target="_name">PAST EVENTS</a>
-        <a href="Контакты" target="_name">CONTACT</a>
+        <a href="#">Почему мы?</a>
+        <a href="#">Выберите фильм</a>
+        <a href="#">Отзывы</a>
+        <a href="#">Товары</a>
+        <a href="#">Contact</a>
       </nav>
     </header>
     <h1>Закажите билет в кино</h1>
@@ -56,7 +56,7 @@
         pariatur, dolores accusantium qui laboriosam!</p>
     </section>
     <section>
-      <h1>Почему мы?</h1>
+      <h1 id="info1">Почему мы?</h1>
       <div>
         <img src="./images/почему мы1.jpg" width="245" height="169" alt="Большие экраны">
         <b>Большие экраны</b>
@@ -107,29 +107,55 @@
       </div>
     </section>
     <section>
-      <h2>Выберите фильм</h2>
-      <b>Начало сеанса</b>
-      <p>10:00</p>
-      <p>12:00</p>
-      <p>14:00</p>
-      <p>16:00</p><br/>
-      <i>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Beatae ex quod accusamus id exercitationem magnam? Velit, 
-        excepturi! Enim, necessitatibus, 
-        architecto sapiente suscipit quo repellat nesciunt sit eligendi libero minus voluptas?</i>
-      <b>Название фильма</b>
-      <a href="https://www.kinopoisk.ru/film/1309570/" target="_blank">Человек-паук</a>
-      <a href="https://www.kinopoisk.ru/film/1122114/" target="_blank">Собачья жизнь 2</a>
-      <a href="https://www.kinopoisk.ru/film/846824/" target="_blank">История игрушек 4</a>
-      <a href="https://www.kinopoisk.ru/film/693730/" target="_blank">Люди в черном:Интернешнл</a><br/>
-      <b>Жанр</b>
-      <p>Фантастика,боевик,приключения</p>
-      <p>Фэнтези,драма,комедия</p>
-      <p>Мультфильм,фэнтези,комедия</p>
-      <p>Фантастика,боевик,комедия</p><br/>
-      <div>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quibusdam 
-        enim modi alias? Laudantium, mollitia fugiat! Mollitia, minima, repudiandae quam quo veritatis 
-        officia, quos quas vero voluptate pariatur ipsam quod debitis?
-      </div>
+      <h2 id=info2>Выберите фильм</h2>
+      <style>
+        table{
+          border-collapse: collapse;
+          border-radius: 20px;
+        }
+        th{
+          background-color: green;
+        }
+        tbody{
+          background-color: grey;
+        }
+      </style>
+      <table style="width: 849px;">
+        <thead>
+          <tr>
+            <th>Начало сеанса</th>
+            <th>Название фильма</th>
+            <th>Жанр</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>10:00</td>
+            <td><a href="https://www.kinopoisk.ru/film/1309570/" target="_blank">Человек-паук</a></td>
+            <td>Фантастика,боевик,приключения</td>
+          </tr>
+          <tr>
+            <td>12:00</td>
+            <td><a href="https://www.kinopoisk.ru/film/1122114/" target="_blank">Собачья жизнь 2</a></td>
+            <td>Фэнтези,драма,комедия</td>
+          </tr>
+          <tr>
+            <td>14:00</td>
+            <td><a href="https://www.kinopoisk.ru/film/846824/" target="_blank">История игрушек 4</a></td>
+            <td>Мультфильм,фэнтези,комедия</td>
+          </tr>
+          <tr>
+            <td>16:00</td>
+            <td><a href="https://www.kinopoisk.ru/film/693730/" target="_blank">Люди в черном:Интернешнл</a></td>
+            <td>Фантастика,боевик,комедия</td>
+          </tr>
+        </tbody>
+        <tfoot>
+          <tr>
+            <td colspan="3"><i>Lorem ipsum dolor sit amet consectetur adipisicing elit. Cumque quaerat aliquid corrupti explicabo porro. Nihil quisquam rem odio ut, distinctio, eligendi minus sunt autem porro adipisci hic! Illo, possimus id!</i></td>
+          </tr>
+        </tfoot>
+      </table>
     </section>
     <section>
       <h1>Подарок каждому!</h1> 
@@ -137,8 +163,7 @@
         Nunc vel risus commodo viverra maecenas accumsan. Morbi enim nunc faucibus a. Mauris commodo quis imperdiet massa.Sed elementum tempus egestas sed sed risus pretium quam vulputate. Aliquam vestibulum morbi blandit cursus risus at ultrices mi tempus. 
         Nibh mauris cursus mattis molestie a iaculis at. Vel quam elementum pulvinar etiam non quam. Ut pharetra sit amet aliquam id diam maecenas. Sed elementum tempus egestas sed sed risus pretium quam vulputate. Aliquam vestibulum morbi blandit cursus risus at ultrices mi tempus. 
         Facilisi cras fermentum odio eu feugiat pretium nibh. Eu nisl nunc mi ipsum. Nibh sit 
-        amet commodo nulla facilisi nullam vehicula ipsum.
-      </div>
+        amet commodo nulla facilisi nullam vehicula ipsum.</div>
       <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nam, veniam ipsa?
         Quibusdam culpa quod, quo ducimus voluptatem nobis dolore dicta assumenda 
         nemo mollitia esse hic iure sapiente, corporis eligendi officiis?</p>
@@ -159,7 +184,7 @@
       praesentium enim inventore modi ut adipisci necessitatibus pariatur.</div>
     </section>
     <section>
-      <h2>Товары</h2>
+      <h2 id=info3>Товары</h2>
       <div>Lorem ipsum dolor sit amet consectetur adipisicing elit. Minima tempora 
       doloremque error nam porro minus nulla repellat neque, aut id deleniti cupiditate 
       saepe ducimus facere in perferendis quia odit reprehenderit?</div>
@@ -168,7 +193,7 @@
       <img src="poster.jpg" width="245" height="331" alt="Постер “Мстители”">
     </section>
     <section>
-      <h2>Отзывы</h2>
+      <h2 id=info4>Отзывы</h2>
       <div>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Corporis perspiciatis cumque asperiores quam incidunt 
       soluta aperiam fugit ipsum beatae repudiandae. Modi labore velit 
       aspernatur blanditiis commodi dolorum culpa accusantium quidem.</div>
@@ -192,12 +217,28 @@
       </div>
     </section>
     <section>
-      <b>Обратная связь</b>
-      <p>Полное имя</p>
-      <p>Номер места</p>
-      <p>Напишите свой отзыв</p>
-      <label><input type="checkbox" name="checkdan"><span>Я согласен на обработку своих персональных данных</span></label>
-      <button>послать</button>
+      <label for="Обратная связь">Обратная связь</label>
+      <form action="/order">
+        <div>
+          <input type="text" placeholder="Полное имя" name="name">
+        </div>
+        <div>
+          <select>
+            <option value="">Номер места</option>
+            <option value="12">12</option>
+            <option value="25">25</option>
+          </select>
+        </div>
+        <div>
+          <input type="text" placeholder="Напишите свой отзыв">
+        </div>
+        <div>
+          <label><input type="checkbox" name="checkdan"><span>Я согласен на обработку своих персональных данных</span></label>
+        </div>
+        <div>
+          <button>послать</button>
+        </div>
+      </form>
     </section>
     <div>
       <img src="karta.png" width="973" height="421" alt="Карта">
@@ -230,13 +271,13 @@
     <footer>
       <b>SITE</b><br/>
       <nav>
-        <a href="Почему мы" target="_name">EVENT DETAILS</a>
-        <a href="Выберите фильм" target="_name">SPEAKERS</a>
-        <a href="Товары" target="_name">SPONSORS</a>
-        <a href="Отзывы" target="_name">PAST EVENTS</a>
-        <a href="Контакты" target="_name">CONTACT</a>
+        <a href="#">Почему мы?</a>
+        <a href="#">Выберите фильм</a>
+        <a href="#">Отзывы</a>
+        <a href="#">Товары</a>
+        <a href="#">Contact</a>
       </nav>
-      <div>
+      <div id="Contact">
         <b>CONTACT</b>
         <a href="tel:+7(800) 355 12-56">+7(800)3551256</a>
         <a href="mailto:kino@innopolis.ru">kino@innopolis.ru</a>
