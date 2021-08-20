@@ -65,8 +65,8 @@
         molestias ipsa voluptates quasi nostrum deleniti esse quis veniam 
         pariatur, dolores accusantium qui laboriosam!</p>
     </div>
-    <div class="container">
-      <section id="why"> 
+    <section id="why">
+      <div class="container"> 
         <h1>Почему мы?</h1>
         <div>
           <img src="./images/почему мы1.jpg" width="245" height="169" alt="Большие экраны">
@@ -116,68 +116,74 @@
             architecto, repudiandae veniam blanditiis nobis, excepturi saepe quod 
             vero! Itaque earum nam eum autem necessitatibus.</p>
         </div>
-      </section>
-    </div>
-    <div class="container"> 
-      <section id="cinema">
-        <h2 class="h2">Выберите фильм</h2>
+      </div>
+    </section>
+    <section id="cinema"> 
+      <div class="container">
         <table class="table">
+          <caption class="table__heading">Выберите фильм</caption>
           <thead>
             <tr class="table__row">
-              <th class="th th-borderleft"></th>
-              <th class="th">Начало сеанса</th>
-              <th class="th">Название фильма</th>
-              <th class="th th-borderright">Жанр</th>
+              <th class="table__line table__line_borderleft"></th>
+              <th class="table__line">Начало сеанса <svg class="table__arrow" width="9" height="5" viewBox="0 0 9 5" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M4.49182 0.5L8.49182 5H0.491821L4.49182 0.5Z" fill="white"/>
+                </svg>
+                </th>
+              <th class="table__line">Название фильма <svg class="table__arrow" width="8" height="5" viewBox="0 0 8 5" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M4 4.5L8 0H0L4 4.5Z" fill="white"/>
+                </svg>
+                </th>
+              <th class="table__line table__line_borderright">Жанр</th>
             </tr>
           </thead>
           <tbody>
             <tr class="table__row table__row_darkgrey">               
-              <td class="td"><svg width="11" height="9" viewBox="0 0 11 9" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <td class="table__column table__column_check"><svg width="11" height="9" viewBox="0 0 11 9" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <path fill-rule="evenodd" clip-rule="evenodd" d="M4.60581 6.79378L1.46056 3.93033L0.787354 4.66979L4.70255 8.23421L10.8223 0.94099L10.0562 0.298203L4.60581 6.79378Z" fill="white"/>
                 </svg>
               </td>
-              <td>10:00</td>
-              <td class="td">
-                <a class="table__link" href="https://www.kinopoisk.ru/film/1309570/" target="_blank">Человек-паук</a></td>
-              <td class="td">Фантастика,боевик,приключения</td>
+              <td class="table__column table__column_time">10:00</td>
+              <td class="table__column">
+                <a class="table__link " href="https://www.kinopoisk.ru/film/1309570/" target="_blank">Человек-паук</a></td>
+              <td class="table__column">Фантастика,боевик,приключения</td>
             </tr>
             <tr class="table__row table__row_lightgrey">
-              <td class="td"><svg width="11" height="9" viewBox="0 0 11 9" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <td class="table__column table__column_check"><svg width="11" height="9" viewBox="0 0 11 9" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <path fill-rule="evenodd" clip-rule="evenodd" d="M4.60581 6.79378L1.46056 3.93033L0.787354 4.66979L4.70255 8.23421L10.8223 0.94099L10.0562 0.298203L4.60581 6.79378Z" fill="#A3CC40"/>
                 </svg>
               </td>
-              <td>12:00</td>
-              <td class="td">
+              <td class="table__column table__column_time">12:00</td>
+              <td class="table__column">
                 <a class="table__link" href="https://www.kinopoisk.ru/film/1122114/" target="_blank">Собачья жизнь 2</a></td>
-              <td class="td">Фэнтези,драма,комедия</td>
+              <td class="table__column">Фэнтези,драма,комедия</td>
             </tr>
             <tr class="table__row table__row_darkgrey">
-              <td class="td"><svg width="11" height="9" viewBox="0 0 11 9" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <td class="table__column table__column_check"><svg width="11" height="9" viewBox="0 0 11 9" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <path fill-rule="evenodd" clip-rule="evenodd" d="M4.60581 6.79378L1.46056 3.93033L0.787354 4.66979L4.70255 8.23421L10.8223 0.94099L10.0562 0.298203L4.60581 6.79378Z" fill="white"/>
                 </svg>
               </td>
-              <td>14:00</td>
-              <td class="td">
+              <td class="table__column table__column_time">14:00</td>
+              <td class="table__column">
                 <a class="table__link" href="https://www.kinopoisk.ru/film/846824/" target="_blank">История игрушек 4</a></td>
-              <td class="td">Мультфильм,фэнтези,комедия</td>
+              <td class="table__column">Мультфильм,фэнтези,комедия</td>
             </tr>
             <tr class="table__row table__row_lightgrey">
-              <td class="td td-bottomleft"><svg width="11" height="9" viewBox="0 0 11 9" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <td class="table__column table__column_bottomleft"><svg width="11" height="9" viewBox="0 0 11 9" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <path fill-rule="evenodd" clip-rule="evenodd" d="M4.60581 6.79378L1.46056 3.93033L0.787354 4.66979L4.70255 8.23421L10.8223 0.94099L10.0562 0.298203L4.60581 6.79378Z" fill="white"/>
                 </svg>
               </td>
-              <td>16:00</td>
-              <td class="td">
+              <td class="table__column table__column_time">16:00</td>
+              <td class="table__column">
                 <a class="table__link" href="https://www.kinopoisk.ru/film/693730/" target="_blank">Люди в черном:Интернешнл</a></td>
-              <td class="td td-bottomright">Фантастика,боевик,комедия</td>
+              <td class="table__column table__column_bottomright">Фантастика,боевик,комедия</td>
             </tr>
           </tbody>
-          <tfoot><i>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quibusdam consectetur facere expedita fuga 
-          laudantium odit ipsum adipisci iure cumque, voluptates unde magnam reiciendis. Eum ex necessitatibus beatae doloremque vitae sapiente.</i>
+          <tfoot>Lorem ipsum dolor sit amet consectetur adipisicing elit. Corrupti ad ratione repudiandae debitis illum magni. 
+            Sapiente dolores ipsum nam consectetur nesciunt possimus dolore quo corporis. Sit maiores laborum placeat quidem.
           </tfoot>
         </table>
-      </section>
-    </div>
+      </div>
+    </section>
     <div class="container">
       <h2>Подарок каждому!</h2> 
       <div>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Nibh mauris cursus mattis molestie a iaculis at. Vel quam elementum pulvinar etiam non quam. Ut pharetra sit amet aliquam id diam maecenas. 
@@ -204,8 +210,8 @@
       consectetur perspiciatis veniam, quia sint nulla nam omnis dignissimos culpa, 
       praesentium enim inventore modi ut adipisci necessitatibus pariatur.</div>
     </div>
-    <div class="container">
-      <section id="products">
+    <section id="products">
+      <div class="container">
         <h2>Товары</h2>
         <div>Lorem ipsum dolor sit amet consectetur adipisicing elit. Minima tempora 
         doloremque error nam porro minus nulla repellat neque, aut id deleniti cupiditate 
@@ -215,8 +221,8 @@
         <img src="./images/poster.jpg" width="245" height="331" alt="Постер “Мстители”">
       </section>
     </div>
-    <div class="container">
-      <section id="reviews">
+    <section id="reviews">
+      <div class="container">
         <h2>Отзывы</h2>
         <div>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Corporis perspiciatis cumque asperiores quam incidunt 
         soluta aperiam fugit ipsum beatae repudiandae. Modi labore velit 
@@ -239,8 +245,8 @@
           Deleniti iure sunt recusandae veritatis deserunt autem earum 
           cupiditate pariatur qui est magnam nostrum, cumque at fugiat eaque voluptas!</p>
         </div>
-      </section>
-    </div>
+      </div>
+    </section>
     <div class="container">
       <label for="Обратная связь">Обратная связь</label>
       <form action="order.php" enctype="multipart/form-data">
