@@ -1,54 +1,52 @@
-@font-face { 
-    font-family: "IBMPlexSans";
-    src: url(../fonts/IBMPlexSans-Regular.woff) format("woff"), 
-         url(../fonts/IBMPlexSans-Regular.woff2) format("woff2"), 
-         url(../fonts/IBMPlexSans-Regular.ttf) format("ttf");
-    font-weight: 400;
-    font-style: normal;
-}
-@font-face { 
-    font-family: "IBMPlexSans";
-    src: url(../fonts/IBMPlexSans-SemiBold.woff) format("woff"), 
-         url(../fonts/IBMPlexSans-SemiBold.woff2) format("woff2"), 
-         url(../fonts/IBMPlexSans-SemiBold.ttf) format("ttf");
-    font-weight: 600;
-    font-style: normal;
-}
-@font-face { 
-    font-family: "IBMPlexSans";
-    src: url(../fonts/IBMPlexSans-Bold.woff) format("woff"), 
-         url(../fonts/IBMPlexSans-Bold.woff2) format("woff2"); 
-    font-weight: 700;
-    font-style: normal;
-}
-@font-face { 
-    font-family: "IBMPlexSans";
-    src: url(../fonts/IBMPlexSans-Medium.woff) format("woff"), 
-         url(../fonts/IBMPlexSans-Medium.woff2) format("woff2"); 
-    font-weight: 500;
-    font-style: normal;
-}
-@font-face { 
-    font-family: "IBMPlexSans";
-    src: url(../fonts/IBMPlexSans-Thin.woff) format("woff"), 
-         url(../fonts/IBMPlexSans-Thin.woff2) format("woff2");
-    font-weight: 100;
-    font-style: normal;
-}
 body{
-    font-family: 'IBMPlexSans',sans-serif;
+    font-family: "IBMPlexSans",sans-serif;
 }
-.header__containing{
-    max-width: 1124px;
-    margin: 0 auto;
-    padding: 0 89px;
-    box-sizing: border-box;
+.cinematheatre{
+   color:white;
+   background-image: url('../images/foncinema.jpg');
+   background-repeat: no-repeat;
+   background-position: center;
+   background-size: cover;
 }
-.container{
-    max-width: 1124px;
-    margin: 0 auto;
-    padding: 0 138px;
-    box-sizing: border-box;
+.cinematheatre__header{
+    padding: 51px 0;
+    display: flex;
+    justify-content: space-between;
+}
+.cinematheatre__logo{
+   display: block;
+   margin-right: 44px; 
+}
+.cinematheatre__up
+.cinematheatre__line{
+    display: flex;
+}
+.cinematheatre_tel,
+.cinematheatre_mail,
+.cinematheatre_adress{
+    display: inline-block;
+    color: white;
+    font-size: 12px;
+}
+.cinematheatre_call{
+    display: inline-block;
+}
+.cinematheatre_tel,
+.cinematheatre_mail,
+.cinematheatre_adress,
+.cinematheatre_call{
+    margin-right: 50px;
+}
+.cinematheatre_lng{
+    color: white;
+    font-size: 12px;
+}   
+.cinematheatre_lng-change{
+    display: inline-block;
+    position: relative;
+}
+.cinematheatre_lng-svg{
+    fill: white;
 }
 .table{
     border-collapse:collapse;
@@ -115,7 +113,15 @@ body{
 padding-left: 5px;
 padding-bottom: 2px;
 }
-.h2{
+.table__footer{
+    font-style: normal;
+    font-weight: 400;
+    font-size: 11px;
+    text-align: center;
+    padding-left: 50px;
+    padding-right: 50px;
+}
+.header{
     font-style: normal;
     font-size: 48px;
     font-weight: 500;

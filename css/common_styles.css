@@ -1,0 +1,9 @@
+.container{
+    max-width: 1124px;
+    margin: 0 auto;
+    padding: 0 138px;
+    box-sizing: border-box;
+}
+.container_cinematheatre{
+    padding: 0 89px;
+}
