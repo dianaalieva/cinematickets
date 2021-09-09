@@ -118,6 +118,7 @@ html {
     position: relative;
     top: 300px;
     left: 50%;
+    z-index: 1;
     background-color: white;
     color: black;
     width: 426px;
@@ -141,11 +142,26 @@ html {
     color: rgba(163, 204, 64, 1);
     ;
   }
+  .cinema__why-row{
+    width: 1124px;
+    display: table;
+    display: flex;
+    flex-wrap: wrap;
+  }
   .cinema__why-float{
+    display: table-cell;
     float: left;
+    max-width: 33,33%;
     padding: 14px;
   }
   .cinema__why-once{
+    display: table-cell;
+    float: left;
+    max-width: 33,33%;
+    padding: 14px;
+  }
+  .cinema__why-once2{
+    float: left;
     padding: 14px;
   }
   .cinema__why-block{
