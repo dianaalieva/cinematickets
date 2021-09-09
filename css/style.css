@@ -3,14 +3,14 @@ html {
   }
   
   body {
-    font-family: 'IBMPlexSans', sans-serif;
+    font-family: "IBMPlexSans", sans-serif;
     overflow: hidden;
   }
   .cinematheatre {
     position: relative;
     padding: 51px 0 200px;
     color: white;
-    background-image: url('../images/foncinema.jpg');
+    background-image: url('../images/foncinema_1.jpg');
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
@@ -24,6 +24,7 @@ html {
     border-bottom: 150px solid #fff;
     position: absolute;
     bottom: 0;
+    pointer-events: none;
   }
   .cinematheatre__header {
     display: flex;
@@ -72,6 +73,22 @@ html {
   .cinematheatre__item:not(:last-child) {
     margin-right: 50px;
   }
+  .cinematheatre__select{
+    background: none;
+    border: none;
+    outline: none;
+    color: white;
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 16px;
+
+  }
+  .cinematheatre__select-en{
+    color: rgb(184, 151, 151);
+  }
+  .cinematheatre__select-ru{
+    color: black;
+  }
   .cinematheatre__title {
     margin-bottom: 19px;
     font-weight: 100;
@@ -80,6 +97,7 @@ html {
     text-align: center;
   }
   .cinematheatre__subtitle {
+    width: 400;
     font-size: 41px;
     line-height: 53px;
     text-align: center;
