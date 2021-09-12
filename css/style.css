@@ -4,7 +4,7 @@ html {
   
   body {
     font-family: "IBMPlexSans",sans-serif;
-    overflow: hidden;
+    
   }
   .cinematheatre {
     position: relative;
@@ -268,21 +268,55 @@ html {
 
   }
   .gives{
-    background-image: url('../images/gives.jpg');
+    background-image: url('../images/Group\ 43.jpg');
     position: relative;
+    padding: 200px 0 150px;
+    color: white;
     background-position: center;
     background-size: cover;
-    width: 1807px;
-    height: 1124px;
-    padding: top 100px; ;
   }
-  .gives__surprise{
+  .gives::before{
+    content: '';
+    display: block;
+    width: 100%;
+    border-left: 100px solid transparent;
+    border-top: 150px solid #fff;;
+    position: absolute;
+    top: 0;
+    pointer-events: none; 
+  }
+  .gives::after{
+    content: '';
+    display: block;
+    width: 100%;
+    border: 100vw solid transparent;
+    border-bottom: 150px solid #fff;
+    position: absolute;
+    bottom: 0;
+    pointer-events: none;
+  }
+  .box{
     width: 302px;
     height: 303px;
     position: relative;
     bottom: 200px;
     right: 50px;
   }
+  .square{
+    font-weight: 400;
+    font-size: 11px;
+    height: 173px;
+    width: 548px;
+    
+    text-align: right;
+    
+  }
+  .gives__surprise{
+    font-weight: 500;
+    font-size: 48px;
+    color: white;
+  }
+  
   .gives__button{
     background-color:rgba(163, 204, 64, 1);
     
