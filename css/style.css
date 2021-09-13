@@ -113,7 +113,7 @@ html {
   .cinematheatre_lng-svg {
     fill: white;
   }
-  .cinema_welcome{
+  .cinema__welcome{
     box-shadow: 0px 27px 39px 0px rgba(163, 204, 64, 0.18);
     position: relative;
     top: 300px;
@@ -126,21 +126,26 @@ html {
     border-radius: 10px;
     font-weight: 400;
     font-size: 11px;
+    line-height: 15px;
     padding: 30px 47px;
   }
-  .cinema_welcome-welcome{
+  .welcome{
     font-weight: 600;
     font-size: 33px;
+    padding-bottom: 30px;
+    padding-top: 20px;
   }
   .cinema__welcome-welcome{
-    padding-top: 22px;
-    padding-bottom: 10px;
+    padding-bottom: 20px;
+  }
+  #why{
+    padding-top: 60px;
   }
   .cinema__why{
     font-weight: 500;
     font-size: 48px;
     color: rgba(163, 204, 64, 1);
-    ;
+    padding-bottom: 84px;
   }
   .cinema__why-row{
     width: 1124px;
@@ -279,10 +284,10 @@ html {
     content: '';
     display: block;
     width: 100%;
-    border-left: 100px solid transparent;
-    border-top: 150px solid #fff;;
+    border: 100vw solid transparent;
+    border-top: 150px solid #fff;
+    top: 0; right: 0;
     position: absolute;
-    top: 0;
     pointer-events: none; 
   }
   .gives::after{
@@ -302,25 +307,34 @@ html {
     bottom: 200px;
     right: 50px;
   }
-  .square{
+  .gives__square{
+    padding-bottom: 10px;
+    margin-right: 0;
     font-weight: 400;
     font-size: 11px;
     height: 173px;
     width: 548px;
-    
     text-align: right;
     
+  }
+  .gives__square div{
+    padding-bottom: 10px;
   }
   .gives__surprise{
     font-weight: 500;
     font-size: 48px;
     color: white;
+    padding-bottom: 38px;
   }
   
   .gives__button{
     background-color:rgba(163, 204, 64, 1);
-    
-    
+    color: #ffffff;
+    font-weight: 500;
+    font-size: 14px;
+    text-align: center;
+    padding: 7px 18px;
+    border-radius: 10px;
   }
   
   

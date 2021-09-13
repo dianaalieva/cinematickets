@@ -8,5 +8,6 @@
     padding: 0 89px;
 }
 .container container__gives{
-    text-align: left;
+    margin-right: 0;
+    text-align: right;
 }
