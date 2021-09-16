@@ -431,15 +431,16 @@ html {
   .reviews__foto{
     padding: 99.05px 0 166.95px 0;
   }
-  .form{
-    width: 767px;
-    height: 527px;
-    padding: 43px 40px 61px 40px
-  }
+ 
   .form__image{
     position: relative;
     background-image: url(../images/form.jpg);
     background-repeat: no-repeat;
+    width: 767px;
+    height: 527px;
+    margin: 43px 40px 61px 40px;
+    border-radius: 20px;
+    box-shadow: 0 9px 39px 0px #3b25255e
     
   }
   .form__feedback{
@@ -456,7 +457,7 @@ html {
     height: 40px;
     background-color: #DEDEDE;
     border-radius: 5px;
-    margin-top: 20px;
+    margin: 30px 42px 0 16px;
     padding-left: 16px;
     font-weight: 400;
     font-size: 15px;
@@ -468,12 +469,61 @@ html {
     height: 40px;
     background-color: #DEDEDE;
     border-radius: 5px;
-    margin-top: 33px;
-    padding: 0 16px 0 16px;
+    margin: 30px 42px 0 16px;
+    padding-left: 16px;
     font-weight: 400;
     font-size: 15px;
     color: #A1A1A1;
     border: 0;
   }
+  .form__feedback-review{
+    width: 344px;
+    height: 120px;
+    background-color: #DEDEDE;
+    border-radius: 5px;
+    margin: 30px 42px 0 16px;
+    font-weight: 400;
+    font-size: 15px;
+    font-style: normal;
+    color: #A1A1A1;
+    border: 0;
+  }
+  .form__feedback-check{
+    width: 18px;
+    height: 17px;
+    border: 1px solid #A3CC40;
+    border-radius: 5px;
+    margin: 27px 6px 46px 16px;
+  }
+  .form__feedback-span{
+    font-weight: normal;
+    font-size: 10px;
+    line-height: 13px;
+    color: #333333;
+    vertical-align: middle;
+
+  }
+  .form__feedback-button{
+    width: 344px;
+    height: 57px;
+    background-color:#A3CC40;
+    border-radius: 6px;
+    margin: 0 42px 33px 16px;
+    border: 0;
+    font-weight: 500;
+    font-size: 20px;
+    color: #ffffff;
+  }
+  .map{
+    margin: 0 auto;
+    padding: 0 76px;
+    width: 973px;
+    height: 421px;
+    vertical-align: middle;
+    max-width: 1124px;
+  }
+
+
+
   
   

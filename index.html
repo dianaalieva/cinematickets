@@ -590,53 +590,46 @@
       </div>
     </section>
     <div class="container">
-      <div class="form">
+     
         <div class="form__image">
           <div class="form__feedback">
             <form action="order.php" enctype="multipart/form-data">
               <label class="form__feedback-head" for="Обратная связь">Обратная связь</label>
-              <input type="text" class="form__feedback-name" placeholder="Полное имя" name="name" required />
-                <select name="place" class="form__feedback-seat" required>
-                  <option value="">Номер места</option>
-                  <option value="1">1</option>
-                  <option value="2">2</option>
-                  <option value="3">3</option>
-                  <option value="4">4</option>
-                  <option value="5">5</option>
-                  <option value="6">6</option>
-                  <option value="7">7</option>
-                  <option value="8">8</option>
-                  <option value="9">9</option>
-                  <option value="10">10</option>
-                </select>
-              
-              <div>
-                <textarea
-                  type="text"
-                  placeholder="Напишите свой отзыв"
-                  name="review"
-                  required
-                ></textarea>
-              </div>
-              <input type="file" name="file" />
+              <label><input type="text" class="form__feedback-name" placeholder="Полное имя" name="name" required /></label>
+              <select name="place" class="form__feedback-seat" required>
+                <option value="">Номер места</option>
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5</option>
+                <option value="6">6</option>
+                <option value="7">7</option>
+                <option value="8">8</option>
+                <option value="9">9</option>
+                <option value="10">10</option>
+              </select>
+              <textarea class="form__feedback-review"
+                type="text"
+                placeholder="Напишите свой отзыв"
+                name="review"
+                required>Напишите свой отзыв
+              </textarea>
               <div>
                 <label
-                  ><input type="checkbox" name="checkdan" required /><span
-                    >Я согласен на обработку своих персональных данных</span
-                  ></label
-                >
+                  ><input class="form__feedback-check" type="checkbox" name="checkdan" required />
+                  <span class="form__feedback-span">Я согласен на обработку своих персональных данных</span
+                  ></label>
               </div>
               <div>
-                <button type="submit">Заказать</button>
-                <input type="submit" value="Заказать" />
+                <button class="form__feedback-button" type="submit">Отправить</button>
               </div>
             </form>
           </div>
         </div>
-      </div>
+      
     </div>
-    <div class="container">
-      <img src="./images/karta.png" width="973" height="421" alt="Карта" />
+    <img class="map" src="./images/karta_1.png" alt="Карта" />
       <svg
         width="156"
         height="40"
@@ -727,7 +720,6 @@
         assumenda voluptas aperiam, dicta, blanditiis, atque mollitia. Eos
         soluta quia nam!
       </p>
-    </div>
     <footer id="contacts">
       <b>SITE</b><br />
       <nav>
