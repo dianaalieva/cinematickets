@@ -515,16 +515,16 @@ html {
     color: #ffffff;
   }
   .map{
-    margin: 0 auto;
-    padding: 0 76px;
-    width: 973px;
-    height: 421px;
-    vertical-align: middle;
-    max-width: 1124px;
+   width: 100%;
+   border-radius: 10px;
   }
+  
+  
   .down{
+    display: flex;
     background-color:#A3CC40 ;
     color: #ffffff;
+    padding: 84px 0 24px 0;
   }
 
 
