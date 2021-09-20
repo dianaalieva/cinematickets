@@ -8,7 +8,7 @@ html {
   }
   .cinematheatre {
     position: relative;
-    padding: 51px 0 200px;
+    padding: 44px 0 110px;
     color: white;
     background-image: url('../images/foncinema_1.jpg');
     background-repeat: no-repeat;
@@ -29,9 +29,14 @@ html {
   .cinematheatre__header {
     display: flex;
     justify-content: space-between;
-    margin-bottom: 151px;
   }
-  
+  .cinematheatre__logo{
+    padding-top: 7px;
+    
+  }
+  .cinematheatre__up{
+    margin: 0 139px 131px 0
+  }
   .cinematheatre__line {
     display: flex;
     justify-content: space-between;
@@ -70,8 +75,17 @@ html {
     color: chartreuse;
     transition: 0.3s;
   }
-  .cinematheatre__item:not(:last-child) {
-    margin-right: 50px;
+  .cinematheatre__item:nth-child(1){
+    margin-left: 44px;
+  }
+  .cinematheatre__item:nth-child(2) {
+    margin-left: 40px;
+  }
+  .cinematheatre__item:nth-child(3) {
+    margin-left: 40px;
+  }
+  .cinematheatre__item:nth-child(2) {
+    margin-left: 40px;
   }
   .cinematheatre__select{
     background: none;
@@ -99,8 +113,8 @@ html {
   .cinematheatre__subtitle {
     width: 400;
     font-size: 41px;
-    line-height: 53px;
     text-align: center;
+    font-style: normal;
   }
   .cinematheatre_lng {
     color: white;
@@ -116,18 +130,18 @@ html {
   .cinema__welcome{
     box-shadow: 0px 27px 39px 0px rgba(163, 204, 64, 0.18);
     position: relative;
-    top: 300px;
+    top: 180px;
     left: 50%;
     z-index: 1;
     background-color: white;
     color: black;
-    width: 426px;
-    height: 221px;
+    width: 326px;
+    height: 170px;
     border-radius: 10px;
     font-weight: 400;
     font-size: 11px;
     line-height: 15px;
-    padding: 30px 47px;
+    padding: 28px 47px 20px
   }
   .welcome{
     font-weight: 600;
@@ -136,16 +150,14 @@ html {
     padding-top: 20px;
   }
   .cinema__welcome-welcome{
-    padding-bottom: 20px;
-  }
-  #why{
-    padding-top: 60px;
+    padding-bottom: 10px;
   }
   .cinema__why{
     font-weight: 500;
     font-size: 48px;
     color: rgba(163, 204, 64, 1);
-    padding-bottom: 84px;
+    padding-top: 18px;
+    padding-bottom: 94px;
   }
   .cinema__why-row{
     width: 1124px;
@@ -185,7 +197,7 @@ html {
     font-size: 20px;
     color: rgba(51, 51, 51, 1);
     text-align: center;
-    padding: 27px 0 25px 0;
+    padding: 40px 0 27px 0;
   }
   .cinema__why-lorem{
     font-weight: 400;
@@ -201,7 +213,7 @@ html {
     font-size: 48px;
     font-weight: 500;
     color: rgba(163, 204, 64, 1);
-    padding: 144px 0 84px 0;
+    padding: 142px 0 89px 0;
   }
   .table {
     border-collapse: collapse;
@@ -231,6 +243,7 @@ html {
     color: white;
     text-align-last: left;
     padding-left: 10px;
+    vertical-align: middle;
   }
   .table__line_borderright {
     border-top-right-radius: 10px;
@@ -245,6 +258,7 @@ html {
     font-weight: 400;
     color: white;
     padding-left: 10px;
+    vertical-align: middle;
   }
   .table__column_check {
     padding-left: 25px;
@@ -275,14 +289,13 @@ html {
     font-weight: 400;
     font-size: 11px;
     text-align: center;
-    padding-left: 50px;
-    padding-right: 50px;
+    padding: 30px 140px 0 140px;
 
   }
   .gives{
     background-image: url('../images/Group 43.jpg');
+    height: 685px;
     position: relative;
-    padding: 200px 0 150px;
     color: white;
     background-position: center;
     background-size: cover;
@@ -310,9 +323,12 @@ html {
   .box{
     width: 302px;
     height: 303px;
-    position: relative;
-    bottom: 200px;
-    right: 50px;
+    position: absolute;
+    
+  }
+  .gives__contain{
+    margin-left: auto;
+    max-width: 560px;
   }
   .gives__square{
     padding-bottom: 10px;
@@ -405,8 +421,6 @@ html {
     position: relative;
     background-repeat: no-repeat;
     background-size: contain;
-    width: 1171.33px;
-    height: 792px;
     left: 0;
   }
   .reviews__head{
@@ -520,11 +534,44 @@ html {
   }
   
   
-  .down{
-    display: flex;
+  .footer{
     background-color:#A3CC40 ;
     color: #ffffff;
     padding: 84px 0 24px 0;
+  }
+  .down{
+    display: flex;
+    flex-direction: row;
+    
+  }
+  .down__university{
+   width: 269px;
+   font-weight: 400;
+   font-size: 14px;
+   line-height: 18px;
+  }
+  .down__university-media{
+    padding: 25px 0 35px 0;
+  }
+  .down__university-icon{
+    padding-right: 34px;
+    
+  }
+  .down__site{
+    width: 111px;
+    padding: 0 98px 0 171px;
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 20px;
+    color: #ffffff;
+  }
+  .down__head{
+    font-weight: 700;
+    font-size: 20px;
+    margin-bottom: 40px;
+  }
+  .down__contact{
+   width: 189px;
   }
 
 
