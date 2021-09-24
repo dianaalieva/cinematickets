@@ -172,7 +172,7 @@
         </header>
 
         <h1 class="cinematheatre__title">Закажите билет в кино</h1>
-        <h2 class="cinematheatre__subtitle">Каждому покупателю подарок!</h2>
+        <h2 class="cinematheatre__subtitle">Всем покупателю подарок!</h2>
         <div class="cinema__welcome">
             <h3 class="welcome">Добро пожаловать!</h3>
           <p class="cinema__welcome-welcome">
@@ -592,40 +592,42 @@
     <div class="container">
      
         <div class="form__image">
-          <div class="form__feedback">
-            <form action="order.php" enctype="multipart/form-data">
-              <label class="form__feedback-head" for="Обратная связь">Обратная связь</label>
-              <label><input type="text" class="form__feedback-name" placeholder="Полное имя" name="name" required /></label>
-              <select name="place" class="form__feedback-seat" required>
-                <option value="">Номер места</option>
-                <option value="1">1</option>
-                <option value="2">2</option>
-                <option value="3">3</option>
-                <option value="4">4</option>
-                <option value="5">5</option>
-                <option value="6">6</option>
-                <option value="7">7</option>
-                <option value="8">8</option>
-                <option value="9">9</option>
-                <option value="10">10</option>
-              </select>
+          
+            <form class="form__content" action="order.php" enctype="multipart/form-data">
+              <h2 class="form__feedback-head">Обратная связь</h2>
+              <input type="text" class="form__feedback-name" placeholder="Полное имя" name="name" required />
+              <div class="form__feedback-select">
+                <img class="feedback__seat" src="./images/seat.png">
+                <select name="place" class="form__feedback-seat" required>
+                  <option value="">Номер места</option>
+                  <option value="1">1</option>
+                  <option value="2">2</option>
+                  <option value="3">3</option>
+                  <option value="4">4</option>
+                  <option value="5">5</option>
+                  <option value="6">6</option>
+                  <option value="7">7</option>
+                  <option value="8">8</option>
+                  <option value="9">9</option>
+                  <option value="10">10</option>
+                </select>
+              </div>
               <textarea class="form__feedback-review"
                 type="text"
                 placeholder="Напишите свой отзыв"
                 name="review"
                 required>Напишите свой отзыв
               </textarea>
-              <div>
-                <label
-                  ><input class="form__feedback-check" type="checkbox" name="checkdan" required />
-                  <span class="form__feedback-span">Я согласен на обработку своих персональных данных</span
-                  ></label>
+              <div class="form__feedback-input">
+                  <img src="./images/check.png">
+                  <input class="form__feedback-check" type="checkbox" name="checkdan" required />
+                  <span class="form__feedback-span">Я согласен на обработку своих персональных данных</span>
               </div>
               <div>
                 <button class="form__feedback-button" type="submit">Отправить</button>
               </div>
             </form>
-          </div>
+          
         </div>
       
     </div>
