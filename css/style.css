@@ -167,7 +167,8 @@ html {
     padding-bottom: 94px;
   }
   .cinema__why-row{
-    width: 1124px;
+    width: 100%;
+    max-width: 1124px;
     display: table;
     display: flex;
     flex-wrap: wrap;
@@ -192,9 +193,8 @@ html {
     justify-content: center;
     vertical-align: top;
     text-align: center;
-    width: 245px;
-    height: 338px;
-
+    width: 100%;
+    max-width: 245px;
   }
   .cinema__why-image{
     border-radius: 10px;
@@ -210,8 +210,8 @@ html {
     font-weight: 400;
     font-size: 11px;
     line-height: 14px;
-    width: 245px;
-    height: 83px;
+    width: 100%;
+    max-width: 245px;
     overflow: hidden;
     padding-bottom: 29px;
   }
@@ -328,22 +328,20 @@ html {
     pointer-events: none;
   }
   .box{
-    width: 302px;
-    height: 303px;
     position: absolute;
     
   }
   .gives__contain{
+    margin-top: 80px;
     margin-left: auto;
     max-width: 560px;
   }
   .gives__square{
     padding-bottom: 10px;
-    margin-right: 0;
     font-weight: 400;
     font-size: 11px;
-    height: 173px;
-    width: 548px;
+    max-width: 548px;
+    width: 100%;
     text-align: right;
     
   }
@@ -351,6 +349,8 @@ html {
     padding-bottom: 10px;
   }
   .gives__surprise{
+    padding-top: 140px;
+    text-align: right;
     font-weight: 500;
     font-size: 48px;
     color: white;
@@ -358,13 +358,17 @@ html {
   }
   
   .gives__button{
+    max-width: 190px;
+    width: 100%;
     background-color:rgba(163, 204, 64, 1);
     color: #ffffff;
     font-weight: 500;
     font-size: 14px;
-    text-align: center;
     padding: 7px 18px;
-    border-radius: 10px;
+    border-radius: 6px;
+    border: 0;
+    margin-top: 20px;
+    float: right;
   }
   .films{
     font-weight: 500;
@@ -502,6 +506,7 @@ html {
   .form__feedback-name::placeholder{
     color:#A1A1A1 ;
   }
+  
   .form__feedback-select{
     position: relative;
   }
