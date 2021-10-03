@@ -377,6 +377,10 @@ html {
     margin-top: 20px;
     float: right;
   }
+  .gives__button:focus{
+    background-color: #ffffff;
+    color: #A3CC40;
+  }
   .films{
     font-weight: 500;
     font-size: 48px;
@@ -393,10 +397,25 @@ html {
     width: 100%;
     table-layout: fixed;
     border-collapse: collapse;
+    position: relative;
   }
   .catalog__image{
     width: 283px;
     overflow: hidden;
+  }
+  .catalog_image-cont{
+    position: relative;
+  }
+  .catalog_image-cont::after{
+    content: ' ';
+    background-color: #161616CC;
+    display: block;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    z-index: 1;
   }
   .catalog__image-img{
     display: block;
@@ -404,24 +423,47 @@ html {
   .catalog__row{
     border-collapse: collapse;
   }
-  .films__catalog-leo{
-    width: 283px;
-    height: 283px;
-    background-image: url('../images/leave.jpg');
+  .catalog__image-modal{
     position: absolute;
-    color: #ffffff;
-    float: right;
+    background-color: rgba(144,210,61,0.4);
+    z-index: 3;
+    height: 100%;
+    max-height: 283px;
+    opacity: 0;
+    top: 100%;
+    transform: translateY(0);
+    overflow: auto;
+    -ms-overflow-style:none;
+    scrollbar-width: none;
   }
-  .films__catalog-leave{
+  .catalog__image-modal::-webkit-scrollbar{
+    width: 0;
+    height: 0;
+  }
+  .catalog_image:hover .catalog__image-modal{
+    bottom: 0;
+    opacity: 1;
+    transform: translateY(-100%);
+    transition: 0.5s;
+  }
+  .catalog_image-cont:hover:after{
+    background-color: transparent;
+  }
+  .catalog__image-name{
+    color: #ffffff;
     font-weight: 600;
     font-size: 29px;
-    padding: 17px 23px 30px 22px;
+    line-height: 37.7px;
+    padding: 17px 22px 0;
+    z-index: 4;
   }
-  .films__catalog-lorem{
+  .catalog__image-lorem{
+    color: #ffffff;
     font-weight: 400;
     font-size: 11px;
-    line-height: 14px;
-    padding: 0 23px 111px 22px;
+    line-height: 14.3px;
+    padding: 13px 22px 17px;
+    z-index: 4;
   }
   .goods{
     font-weight: 500;
@@ -445,10 +487,9 @@ html {
   }
   .reviews{
     background-image: url(../images/reviews_fon.jpg);
-    position: relative;
     background-repeat: no-repeat;
-    background-size: contain;
-    left: 0;
+    position: relative;
+    background-size: cover;
   }
   .reviews__head{
     font-weight: 500;
@@ -467,7 +508,7 @@ html {
     display:inline-flex;
   }
   .reviews__boris{
-    padding: 75px 34px 143px 34px;
+    padding: 75px 89px 143px;
   }
   .reviews__foto{
     padding: 99.05px 0 166.95px 0;
@@ -519,42 +560,53 @@ html {
     display: block;
     padding: 12px 16px;
   }
+  .form__feedback-label{
+    color: #A1A1A1;
+    position: absolute;
+    top: 30%;
+    bottom: 0;
+    left: 16px;
+    transition: 0.3s;
+  }
+  .form__feedback-input:focus{
+    background-color: #ffffff;
+  }
+  .form__feedback-input:focus + .form__feedback-label{
+    transform: translateY(-23px);
+    transition: 0.3s;
+    background-color: #ffffff;
+  }
   .form__feedback-input:hover{
     background-color: #ffffff;
     border: 1px solid #c4c4c4;
     transition: 0.3s;
-    box-shadow: 0 0 0 5px rgba(170, 243, 77, 0.52); ;
-  }
-  .form__feedback-name{
-    color:#A1A1A1 ;
-    position: absolute;
-    background-color: inherit;
-    display: block;
-    top:50%;
-    transform: translateY(-50%);
-    transition: 0.3s;
-    pointer-events: none;
-    padding-left: 13px;
-  }
-  .form__feedback-input:focus + p{
-    transform:translateY(-30px) ;
-  }
-  .form__feedback-input:invalid{
-    border: 2px solid red;
+    box-shadow: 0 0 0 5px rgba(170, 243, 77, 0.52);
   }
   .form__feedback-input:valid{
-    border: 2px solid green;
+    border: 1px solid green;
+  }
+  .form__feedback-input:invalid{
+    border: 1px solid red;
   }
   .form__feedback-select{
     position: relative;
     margin-bottom: 30px;
   }
-  .form__feedback-select:invalid{
-    border: 2px solid red;
+  .form__feedback-seat:hover{
+    background-color: #ffffff;
+    border: 1px solid #c4c4c4;
+    transition: 0.3s;
+    box-shadow: 0 0 0 5px rgba(170, 243, 77, 0.52);
   }
-  .form__feedback-select:valid{
-    border: 2px solid green;
+  .form__feedback-seat:focus{
+    background-color: #ffffff;
+  }
+  .form__feedback-seat:valid{
+    border: 1px solid green;
   } 
+  .form__feedback-seat:invalid{
+    border: 1px solid red;
+  }
   .form__feedback-caret{
     position: absolute;
     top: 50%;
@@ -576,37 +628,102 @@ html {
     -moz-appearance: none;
     appearance: none;
   }
+  .form__feedback-div2{
+    position: relative;
+  }
   .form__feedback-review{
     width: 100%;
     background-color: #DEDEDE;
     border-radius: 5px;
-    margin-bottom: 30px;
+    margin-bottom: 35px;
     font-weight: 400;
     font-size: 15px;
-    font-style: normal;
-    color: #A1A1A1;
-    border: 0;
-    padding: 13px 16px;
+    color: #333;
+    border: 1px solid transparent;
     box-sizing: border-box;
+    transition: 0.3s;
+    position: relative;
+    border: none;
+    display: block;
+    padding: 12px 16px;
+  }
+  .form__feedback-label2{
+    color: #A1A1A1;
+    position: absolute;
+    top: 30%;
+    bottom: 0;
+    left: 16px;
+    transition: 0.3s;
+  }
+  .form__feedback-review:hover{
+    background-color: #ffffff;
+    border: 1px solid #c4c4c4;
+    transition: 0.3s;
+    box-shadow: 0 0 0 5px rgba(170, 243, 77, 0.52);
+  }
+  .form__feedback-review:focus{
+    background-color: #ffffff;
+  }
+  .form__feedback-review:focus + .form__feedback-label2{
+    transform: translateY(-23px);
+    transition: 0.3s;
+    background-color: #ffffff;
   }
   .form__feedback-review:invalid{
-    border: 2px solid red;
+    border: 1px solid red;
   }
   .form__feedback-review:valid{
-    border: 2px solid green;
+    border: 1px solid green;
+  }
+  .form__feedback-cheks{
+    margin-bottom: 27px;
+    position: relative;
   }
   .form__feedback-check{
-    -webkit-appearance: none;
-    -moz-appearance: none;
-    appearance: none;
+    border: 1px solid #A3CC40;
+    border-radius: 5px;
+    box-sizing: border-box;
+    position: absolute;
   }
   .form__feedback-span{
     font-weight: normal;
     font-size: 10px;
     line-height: 13px;
     color: #333333;
-    vertical-align: middle;
-
+  }
+  .form__feedback-check + .form__feedback-span{
+    position: relative;
+    overflow: hidden;
+    cursor: pointer;
+  }
+  .form__feedback-check + .form__feedback-span::before {
+   content: "";
+   display: inline-block;
+   height: 17px;
+   width: 18px;
+   background-color: white;
+   border: 1px solid #A3CC40;
+   border-radius: 5px;
+  }
+  .form__feedback-check:checked + .form__feedback-span::after {
+    content: '';
+    position: absolute;
+    width: 8px;
+    height: 8px;
+    background: #ffffff;
+    top: -7px;
+    left: 5px;
+    border: 2px solid #A3CC40;
+    border-top: none;
+    border-right: none;
+    -webkit-transform: rotate(-45deg);
+    -moz-transform: rotate(-45deg);
+    -o-transform: rotate(-45deg);
+    -ms-transform: rotate(-45deg);
+    transform: rotate(-45deg);
+  }  
+  .form__feedback-check:invalid{
+    border: 2px solid red;
   }
   .form__feedback-button{
     width: 344px;
@@ -618,6 +735,10 @@ html {
     font-size: 20px;
     color: #ffffff;
   }
+  .form__feedback-button:focus{
+    background-color: #ffffff;
+    color: #A3CC40;
+  } 
   .map{
    width: 100%;
    border-radius: 10px;
