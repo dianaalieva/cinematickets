@@ -409,9 +409,8 @@ html {
   }
   .catalog{
     width: 100%;
-    table-layout: fixed;
-    border-collapse: collapse;
     position: relative;
+    display: flex;
   }
   .catalog__image{
     
@@ -760,6 +759,7 @@ html {
     font-size: 0.5rem;
     line-height: 0.65rem;
     color: #333333;
+    margin-left: 0.3rem;
   }
   .form__feedback-check:invalid{
     border: 2px solid red;
