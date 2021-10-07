@@ -1,17 +1,17 @@
 .container{
-    max-width: 1124px;
+    max-width: 56.2rem;
     margin: 0 auto;
-    padding: 0 138px;
+    padding: 0 6.9rem;
     box-sizing: border-box;
 }
 .container_cinematheatre{
-    padding: 0 89px;
+    padding: 0 4.45rem;
 }
 .container container__gives{
     margin-right: 0;
     text-align: right;
 }
 .container_footer{
-    padding: 0 75px;
+    padding: 0 3.75rem;
 }
    

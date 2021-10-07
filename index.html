@@ -5,6 +5,9 @@
     <title>Продажа билетов в Иннополисе</title>
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta content="true" name="HandheldFriendly" />
+    <meta content="width" name="MobileOptimized" />
+    <meta content="yes" name="apple-mobile-web-app-capable" />
     <link rel="stylesheet" href="./css/reset.css" />
     <link rel="stylesheet" href="./css/style.css" />
     <link rel="stylesheet" href="./css/fonts.css" />
@@ -23,8 +26,6 @@
             target="_blank"
           >
             <svg
-              width="156"
-              height="40"
               viewBox="0 0 156 40"
               fill="none"
               xmlns="http://www.w3.org/2000/svg"
@@ -125,8 +126,6 @@
               <li class="cinematheatre__item">
                 <button class="cinematheatre__call">
                   <svg
-                    width="10"
-                    height="10"
                     viewBox="0 0 10 10"
                     fill="none"
                     xmlns="http://www.w3.org/2000/svg"
@@ -198,8 +197,6 @@
             <div class="cinema__why-block">
               <img class="cinema__why-image"
                 src="./images/почему мы1_1.jpg"
-                width="245"
-                height="169"
                 alt="Большие экраны"
               />
               <span class="cinema__why-head">Большие экраны</span>
@@ -216,8 +213,6 @@
               <div class="cinema__why-block">
                 <img class="cinema__why-image"
                   src="./images/почему мы2_1.jpg"
-                  width="245"
-                  height="169"
                   alt="Объемный звук"
                 />
                 <span class="cinema__why-head">Объемный звук</span>
@@ -234,8 +229,6 @@
             <div class="cinema__why-block">
               <img class="cinema__why-image"
                 src="./images/почему мы3_1.jpg"
-                width="245"
-                height="169"
                 alt="Удобные кресла"
               />
               <span class="cinema__why-head">Удобные кресла</span>
@@ -253,8 +246,6 @@
             <div class="cinema__why-block">
               <img class="cinema__why-image"
                 src="./images/почему мы4_1.jpg"
-                width="245"
-                height="169"
                 alt="Большие экраны"
               />
               <span class="cinema__why-head">Уютная атмосфера</span>
@@ -271,8 +262,6 @@
               <div class="cinema__why-block">
                 <img class="cinema__why-image"
                   src="./images/почему мы5_1.jpg"
-                  width="245"
-                  height="169"
                   alt="Полное погружение"
                 />
                 <span class="cinema__why-head">Полное погружение</span>
@@ -289,8 +278,6 @@
             <div class="cinema__why-block">
               <img class="cinema__why-image"
                 src="./images/почему мы6_1.jpg"
-                width="245"
-                height="169"
                 alt="Поцелуи на заднем ряду"
               />
               <span class="cinema__why-head">Поцелуи на заднем ряду</span>
@@ -316,8 +303,6 @@
                 Начало сеанса
                 <svg
                   class="table__arrow"
-                  width="9"
-                  height="5"
                   viewBox="0 0 9 5"
                   fill="none"
                   xmlns="http://www.w3.org/2000/svg"
@@ -332,9 +317,7 @@
                 Название фильма
                 <svg
                   class="table__arrow"
-                  width="8"
-                  height="5"
-                  viewBox="0 0 8 5"
+                  viewBox="0 0 9 5"
                   fill="none"
                   xmlns="http://www.w3.org/2000/svg"
                 >
@@ -348,8 +331,6 @@
             <tr class="table__row table__row_darkgrey">
               <td class="table__column table__column_check">
                 <svg
-                  width="11"
-                  height="9"
                   viewBox="0 0 11 9"
                   fill="none"
                   xmlns="http://www.w3.org/2000/svg"
@@ -376,8 +357,6 @@
             <tr class="table__row table__row_lightgrey">
               <td class="table__column table__column_check">
                 <svg
-                  width="11"
-                  height="9"
                   viewBox="0 0 11 9"
                   fill="none"
                   xmlns="http://www.w3.org/2000/svg"
@@ -404,8 +383,6 @@
             <tr class="table__row table__row_darkgrey">
               <td class="table__column table__column_check">
                 <svg
-                  width="11"
-                  height="9"
                   viewBox="0 0 11 9"
                   fill="none"
                   xmlns="http://www.w3.org/2000/svg"
@@ -432,8 +409,6 @@
             <tr class="table__row table__row_lightgrey">
               <td class="table__column table__column_bottomleft">
                 <svg
-                  width="11"
-                  height="9"
                   viewBox="0 0 11 9"
                   fill="none"
                   xmlns="http://www.w3.org/2000/svg"
@@ -668,22 +643,18 @@
           deleniti cupiditate saepe ducimus facere in perferendis quia odit
           reprehenderit?
         </div>
-        <img src='/images/cola.png' 
-          width="245" 
-          height="331" 
-          alt="Coca-cola" />
-        <img class="goods__image"
-          src='/images/still_man.png'
-          width="245"
-          height="331"
-          alt="Брелок “Железный человек”"
-        />
-        <img
-          src='/images/poster.png'
-          width="245"
-          height="331"
-          alt="Постер “Мстители”"
-        />
+        <div class="goods__row">
+          <img src='/images/cola.png'  
+            alt="Coca-cola" />
+          <img class="goods__image"
+            src='/images/still_man.png'
+            alt="Брелок “Железный человек”"
+          />
+          <img
+            src='/images/poster.png'
+            alt="Постер “Мстители”"
+          />
+        </div>
       </div>
     </section>
     <section id="reviews" class="reviews">
@@ -698,20 +669,14 @@
         <div class="reviews__people">
           <img class="reviews__foto"
             src="images/elena.png"
-            width="210"
-            height="284"
             alt="Елена Еленова"
           />
           <img class="reviews__boris"
             src="images/boris.png"
-            width="246"
-            height="332"
             alt="Борис Борисов"
           />
           <img class="reviews__foto"
             src="images/leonardo.png"
-            width="210"
-            height="284"
             alt="Леонардо ДиКаприо"
           />
         </div>
@@ -721,10 +686,18 @@
         <div class="form"> 
             <form class="form__content" action="order.php" enctype="multipart/form-data">
               <h2 class="form__feedback-head">Обратная связь</h2>
-              <div class="form__feedback-div2">
-                <input  class="form__feedback-input" type="text" id="name" required/>
-                <label class="form__feedback-label" for="name">Полное имя</label>
+              <div class="form__feedback">
+                <label class="form__feedback-unfocus">
+                  <input  class="form__feedback-input" type="text" id="name" required/>
+                  <p class="form__feedback-label">Полное имя</p>
+                </label>
               </div>
+              <!--<div class="form__feedback">
+                   <label class="form__feedback-unfocus form__feedback-focus">
+                     <p class="form__feedback-label">Полное имя</p>
+                     <input  class="form__feedback-input" type="text" id="name" required/>
+                   </label>
+                 </div>-->
               <div class="form__feedback-select">
                 <img class="form__feedback-caret" src="./images/seat.png">
                 <select class="form__feedback-seat" id="seat" name="place" required>
@@ -742,13 +715,16 @@
                 </select>
               </div>
               <div class="form__feedback-div">
-                <input class="form__feedback-review" type="text" name="review" required/>
-                <label class="form__feedback-label2" for="name">Напишите отзыв</label>
+                <label class="form__feedback-rewiew-unfocus">
+                  <textarea class="form__feedback-review" type="text" name="review" required></textarea>
+                  <p class="form__feedback-label2">Напишите отзыв</p>
+                </label>
               </div>
-              <div class="form__feedback-cheks">
-                  <input class="form__feedback-check" type="checkbox" name="checkdan" id="checkbox" required />
-                  <label for="checkbox" class="form__feedback-span">Я согласен на обработку своих персональных данных</label>
-              </div>
+                <label class="form__feedback-check-label">
+                  <input class="form__feedback-check-input" type="checkbox" name="checkdan" id="checkbox" required />
+                  <div class="form__feedback-check"></div>
+                  <p class="form__feedback-span">Я согласен на обработку своих персональных данных</p>
+                </label>
               <div>
                 <button class="form__feedback-button" type="submit">Отправить</button>
               </div>
@@ -763,9 +739,7 @@
         <div class="container container_footer">
           <div class="down">
             <div class="down__university">
-              <svg class="down__university-svg"
-                width="156"
-                height="40"
+              <svg 
                 viewBox="0 0 156 40"
                 fill="none"
                 xmlns="http://www.w3.org/2000/svg"
@@ -858,8 +832,6 @@
                   href="https://instagram.com"
                   target="_blank">
                   <svg class="down__university-logo" 
-                    width="14" 
-                    height="14" 
                     viewBox="0 0 14 14" 
                     fill="none" 
                     xmlns="http://www.w3.org/2000/svg">
@@ -870,9 +842,7 @@
                 </a>
                 <a class="down__university-linkedin" href="https://linkedin.com"  
                   target="_blank">
-                  <svg class="down__university-logo"
-                    width="16" 
-                    height="15" 
+                  <svg class="down__university-logo" 
                     viewBox="0 0 16 15" 
                     fill="none" 
                     xmlns="http://www.w3.org/2000/svg">
@@ -884,8 +854,6 @@
                 <a class="down__university-twitter" href="https://twitter.com"
                   target="_blank">
                   <svg class="down__university-logo"
-                    width="16" 
-                    height="13" 
                     viewBox="0 0 16 13" 
                     fill="none" 
                     xmlns="http://www.w3.org/2000/svg">
@@ -897,8 +865,6 @@
                 <a class="down__university-youtube" href="https://youtube.com"
                   target="_blank">
                   <svg class="down__university-logo" 
-                   width="18"
-                   height="13"
                    viewBox="0 0 18 13"
                    fill="none"
                    xmlns="http://www.w3.org/2000/svg">
@@ -910,8 +876,6 @@
                 <a class="down__university-facebook" href="https://facebook.com"
                   target="_blank">
                   <svg class="down__university-logo"
-                   width="8"
-                   height="16"
                    viewBox="0 0 8 16"
                    fill="none"
                    xmlns="http://www.w3.org/2000/svg">
