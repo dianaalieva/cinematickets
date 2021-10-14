@@ -41,7 +41,7 @@ html {
   }
   .cinematheatre__up{
     white-space: nowrap;
-    margin: 0 6.95rem 6.55rem 0;
+    margin: 0 6.25rem 6.55rem 0;
     flex-grow: 1;
   }
   .cinematheatre__line {
@@ -109,6 +109,10 @@ html {
   .cinematheatre__item:nth-child(5){
     margin-left: 2rem;
   }
+  .cinematheatre_lng-change {
+    position: relative;
+    margin-left:0
+  }
   .cinematheatre__select{
     background: none;
     border: none;
@@ -133,6 +137,9 @@ html {
   .change__caret{
     width: 0.4rem;
     height: 0.4rem;
+    position: absolute;
+    margin-left: 0.26rem;
+    top: 5%;
   }
   .cinematheatre__title {
     margin-bottom: 1.25rem;
@@ -146,17 +153,6 @@ html {
     font-size: 2.05rem;
     text-align: center;
     font-style: normal;
-  }
-  .cinematheatre_lng {
-    color: white;
-    font-size: 0.6rem;
-  }
-  .cinematheatre_lng-change {
-    position: relative;
-    margin-left:0
-  }
-  .cinematheatre_lng-svg {
-    fill: white;
   }
   .cinema__welcome{
     box-shadow: 0px 1.35rem 1.95rem 0px rgba(163, 204, 64, 0.18);
@@ -230,24 +226,40 @@ html {
     padding: 5.9rem 0 4.45rem 0;
   }
   .table {
+    display: flex;
     border-collapse: collapse;
+    border: 0;
     width: 100%;
   }
-  .table__heading {
-    font-style: normal;
-    font-size: 2.4rem;
-    font-weight: 500;
-    line-height: 3.12rem;
-    color: rgba(163, 204, 64, 1);
+  .table__column1{
+    flex: none;
   }
-  .table__row {
+  .table__column1 div{
     height: 2.25rem;
-    background-color: rgba(163, 204, 64, 1);
+    line-height: 2.25rem;
   }
-  .table__row svg{
-    width: 100%;
-    max-width: 0.55rem;
-    height: 0.45rem;
+  .table__column {
+    flex: 1;
+    font-style: normal;
+    font-size: 0.7rem;
+    font-weight: 400;
+    color: white;
+  }
+  .table__column2{
+    flex: none;
+    font-style: normal;
+    font-size: 0.7rem;
+    font-weight: 400;
+    color: white;
+  }
+  .table__column2 div{
+    padding-right: 3rem;
+    height: 2.25rem;
+    line-height: 2.25rem
+  }
+  .table__column div{
+    height: 2.25rem;
+    line-height: 2.25rem;
   }
   .table__row_darkgrey {
     background-color: rgba(55, 55, 55, 1);
@@ -255,59 +267,39 @@ html {
   .table__row_lightgrey {
     background-color: rgba(76, 77, 79, 1);
   }
+  .table__borderright {
+    border-top-right-radius: 0.5rem;
+  }
+  .table__borderleft {
+    border-top-left-radius: 0.5rem;
+  }
+  .table__bottomright {
+    border-bottom-right-radius: 0.5rem;
+  }
+  .table__bottomleft {
+    border-bottom-left-radius: 0.5rem;
+  }
   .table__line {
+    background-color: rgba(163, 204, 64, 1);;
     font-style: normal;
     font-size: 1rem;
     font-weight: 600;
-    color: white;
-    text-align-last: left;
-    padding-left: 0.5rem;
-    vertical-align: middle;
   }
-  .film-name{
-    padding-left: 3.5rem;
-  }
-  .table__line_borderright {
-    border-top-right-radius: 0.5rem;
-  }
-  .table__line_borderleft {
-    border-top-left-radius: 0.5rem;
-    width: 2.5rem;
-  }
-  .table__column {
-    font-style: normal;
-    font-size: 0.7rem;
-    font-weight: 400;
-    color: white;
-    padding-left: 0.5rem;
-    vertical-align: middle;
-  }
-  .table__column_check {
-    padding-left: 1.25rem;
-  }
-  .table__column_time {
-    color: white;
-  }
-  .table__column_bottomright {
-    border-bottom-right-radius: 0.5rem;
-  }
-  .table__column_bottomleft {
-    border-bottom-left-radius: 0.5rem;
-    padding-left: 1.25rem;
-  }
-  .table__link {
-    margin-left: 3rem;
-    color: white;
-    text-decoration: none;
+  .table__svg{
+    width: 100%;
+    max-width: 0.55rem;
+    height: 0.45rem;
+    padding: 0 2.26rem 0 1.24rem;
   }
   .table__arrow {
-    padding-left: 0.25rem;
-    padding-bottom: 2px;
-    width: 0.45rem;
+    width: 100%;
+    max-width: 0.45rem;
     height: 0.25rem;
+    vertical-align: middle;
   }
-  .tfoot{
-    position: static;
+  .table__link {
+    color: white;
+    text-decoration: none;
   }
   .table__footer {
     font-style: normal;
@@ -444,12 +436,11 @@ html {
   .catalog__image9{
     grid-area: img9;
   } 
-  
-  .catalog_image-cont{
+  .catalog__image{
     position: relative;
     overflow: hidden;
   }
-  .catalog_image-cont::after{
+  .catalog__image::after{
     content: ' ';
     background-color: #161616CC;
     display: block;
@@ -485,7 +476,7 @@ html {
     width: 0;
     height: 0;
   }
-  .catalog_image:hover .catalog__image-modal{
+  .catalog__image:hover .catalog__image-modal{
     
     bottom: 0;
     opacity: 1;
@@ -651,14 +642,14 @@ html {
   .form__feedback-input:hover{
     background-color: #ffffff;
     border: 1px solid #c4c4c4;
-    box-shadow: 0 0 0 0.25rem rgba(170, 243, 77, 0.52);
+    box-shadow: 0 0 0 0.2rem rgba(170, 243, 77, 0.52);
     transition: 0.3s;
   }
   .form__feedback-input:valid{
-    box-shadow: 0 0 0 0.25rem rgba(170, 243, 77, 0.52);
+    box-shadow: 0 0 0 0.2rem rgba(170, 243, 77, 0.52);
   }
   .form__feedback-input:invalid{
-    box-shadow: 0 0 0 0.25rem rgba(191, 48, 48, 0.52);
+    box-shadow: 0 0 0 0.2rem rgba(191, 48, 48, 0.52);
   }
   .form__feedback-select{
     position: relative;
@@ -668,16 +659,16 @@ html {
     background-color: #ffffff;
     border: 1px solid #c4c4c4;
     transition: 0.3s;
-    box-shadow: 0 0 0 0.25rem rgba(170, 243, 77, 0.52);
+    box-shadow: 0 0 0 0.2rem rgba(170, 243, 77, 0.52);
   }
   .form__feedback-seat:focus{
     background-color: #ffffff;
   }
   .form__feedback-seat:valid{
-    box-shadow: 0 0 0 0.25rem rgba(170, 243, 77, 0.52);
+    box-shadow: 0 0 0 0.2rem rgba(170, 243, 77, 0.52);
   } 
   .form__feedback-seat:invalid{
-    box-shadow: 0 0 0 0.25rem rgba(191, 48, 48, 0.52);
+    box-shadow: 0 0 0 0.2rem rgba(191, 48, 48, 0.52);
   }
   .form__feedback-caret{
     width: 100%;
@@ -690,6 +681,7 @@ html {
     pointer-events: none;
   }
   .form__feedback-seat{
+    border: 1px solid transparent;
     width: 100%;
     background-color: #DEDEDE;
     border-radius: 0.25rem;
@@ -697,7 +689,6 @@ html {
     font-weight: 400;
     font-size: 0.75rem;
     color: #A1A1A1;
-    border: 0;
     box-sizing: border-box;
     -webkit-appearance: none;
     -moz-appearance: none;
@@ -720,7 +711,7 @@ html {
     background:transparent;
     box-sizing: border-box;
     transition: 0.3s;
-    border: none;
+    border: 1px solid transparent;
     padding: 0.6rem 0.8rem;
     border-radius: 0.25rem;
   }
@@ -754,14 +745,14 @@ html {
   .form__feedback-review:hover{
     background-color: #ffffff;
     border: 1px solid #c4c4c4;
-    box-shadow: 0 0 0 0.25rem rgba(170, 243, 77, 0.52);
+    box-shadow: 0 0 0 0.2rem rgba(170, 243, 77, 0.52);
     transition: 0.3s;
   }
   .form__feedback-review:valid{
-    box-shadow: 0 0 0 0.25rem rgba(170, 243, 77, 0.52);
+    box-shadow: 0 0 0 0.2rem rgba(170, 243, 77, 0.52);
   }
   .form__feedback-review:invalid{
-    box-shadow: 0 0 0 0.25rem rgba(191, 48, 48, 0.52);
+    box-shadow: 0 0 0 0.2rem rgba(191, 48, 48, 0.52);
   }
   .form__feedback-check-label{
     margin-bottom: 1.35rem;
