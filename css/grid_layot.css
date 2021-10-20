@@ -1,0 +1,36 @@
+.catalog{
+    width: 100%;
+    position: relative;
+    display: grid;
+    grid-template-rows: repeat(3,1fr);
+    grid-template-columns: repeat(3,1fr);
+    grid-template-areas: "img1 img2 img3"
+                         "img4 . img6"
+                         "img7 img8 img9";
+    
+  }
+  .catalog__image1{
+    grid-area: img1;
+  }
+  .catalog__image2{
+    grid-area: img2;
+  }
+  .catalog__image3{
+    grid-area: img3;
+  }
+  .catalog__image4{
+    grid-area: img4;
+  }
+  .catalog__image6{
+    grid-area: img6;
+  }
+  .catalog__image7{
+    grid-area: img7;
+  }
+  .catalog__image8{
+    grid-area: img8;
+  }
+  .catalog__image9{
+    grid-area: img9;
+  } 
+  

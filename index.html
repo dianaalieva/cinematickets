@@ -11,10 +11,10 @@
     <link rel="stylesheet" href="./css/reset.css" />
     <link rel="stylesheet" href="./css/style.css" />
     <link rel="stylesheet" href="./css/fonts.css" />
-    <link rel="stylesheet" href="./css/media_rules.css" />
     <link rel="stylesheet" href="./css/grid_layot.css" />
     <link rel="stylesheet" href="./css/components.css" />
     <link rel="stylesheet" href="./css/common_styles.css" />
+    <link rel="stylesheet" href="./css/media_rules.css" />
   </head>
   <body>
     <div class="cinematheatre">
@@ -108,66 +108,83 @@
               />
             </svg>
           </a>
-          <div class="cinematheatre__up">
-            <ul class="cinematheatre__line cinematheatre__line_top">
-              <li class="cinematheatre__item">
-                <a class="cinematheatre__link" href="tel:+78003551256"
-                  >+7 (800) 355 12-56</a
-                >
-              </li>
-              <li class="cinematheatre__item">
-                <a class="cinematheatre__link" href="mailto:kino@innopolis.ru"
-                  >kino@innopolis.ru</a
-                >
-              </li>
-              <li class="cinematheatre__item">
-                <a class="cinematheatre__link">ул.Спортивная д.1</a>
-              </li>
-              <li class="cinematheatre__item">
-                <button class="cinematheatre__call">
-                  <svg
-                    viewBox="0 0 10 10"
-                    fill="none"
+          <div class="burger-menu">
+            <input id="menu-toggle" type="checkbox" />
+            <label class="menu-btn" for="menu-toggle">
+              <span></span>
+            </label>
+            <div class="cinematheatre__up">
+              <ul class="cinematheatre__line cinematheatre__line_top">
+                <li class="cinematheatre__item">
+                  <a class="cinematheatre__link" href="tel:+78003551256"
+                    >+7 (800) 355 12-56</a
+                  >
+                </li>
+                <li class="cinematheatre__item">
+                  <a class="cinematheatre__link" href="mailto:kino@innopolis.ru"
+                    >kino@innopolis.ru</a
+                  >
+                </li>
+                <li class="cinematheatre__item">
+                  <a class="cinematheatre__link">ул.Спортивная д.1</a>
+                </li>
+                <li class="cinematheatre__item">
+                  <button class="cinematheatre__call">
+                    <svg
+                      viewBox="0 0 10 10"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                      class="cinematheatre__call-img"
+                    >
+                      <path
+                        d="M5.67222 7.98889C4.1 7.18333 2.81111 5.9 2.01111 4.32778L3.12371 3.49804C3.44322 3.25977 3.59072 2.85451 3.49912 2.4666L3.09853 0.770184C2.99196 0.318844 2.58905 0 2.1253 0H0.555556C0.25 0 0 0.25 0 0.555556C0 5.77222 4.22778 10 9.44444 10C9.75 10 10 9.75 10 9.44444V7.87332C10 7.4102 9.68201 7.00767 9.23146 6.90048L7.53545 6.49696C7.14653 6.40442 6.73987 6.55242 6.50139 6.87328L5.67222 7.98889Z"
+                        fill="#333333"
+                      />
+                    </svg>
+                    Заказать звонок
+                  </button>
+                </li>
+                <div class="cinematheatre_lng-change">
+                  <select class="cinematheatre__select">
+                    <option value="en" class="cinematheatre__select-en">EN</option>
+                    <option value="ru" class="cinematheatre__select-ru">RU</option>
+                  </select>
+                  <svg width="8" 
+                    height="4" 
+                    viewBox="0 0 8 4" 
+                    fill="none" 
                     xmlns="http://www.w3.org/2000/svg"
-                    class="cinematheatre__call-img"
-                  >
-                    <path
-                      d="M5.67222 7.98889C4.1 7.18333 2.81111 5.9 2.01111 4.32778L3.12371 3.49804C3.44322 3.25977 3.59072 2.85451 3.49912 2.4666L3.09853 0.770184C2.99196 0.318844 2.58905 0 2.1253 0H0.555556C0.25 0 0 0.25 0 0.555556C0 5.77222 4.22778 10 9.44444 10C9.75 10 10 9.75 10 9.44444V7.87332C10 7.4102 9.68201 7.00767 9.23146 6.90048L7.53545 6.49696C7.14653 6.40442 6.73987 6.55242 6.50139 6.87328L5.67222 7.98889Z"
-                      fill="#333333"
-                    />
-                  </svg>
-                  Заказать звонок
-                </button>
-              </li>
-            </ul>
-            <nav>
-              <ul class="cinematheatre__line">
-                <li class="cinematheatre__item">
-                  <a class="cinematheatre__link cinematheatre__link_nav" href="#why">Почему мы?</a>
-                </li>
-                <li class="cinematheatre__item">
-                  <a class="cinematheatre__link cinematheatre__link_nav" href="#cinema"
-                    >Выберите фильм</a
-                  >
-                </li>
-                <li class="cinematheatre__item">
-                  <a class="cinematheatre__link cinematheatre__link_nav" href="#reviews">Отзывы</a>
-                </li>
-                <li class="cinematheatre__item">
-                  <a class="cinematheatre__link cinematheatre__link_nav" href="#products">Товары</a>
-                </li>
-                <li class="cinematheatre__item">
-                  <a class="cinematheatre__link cinematheatre__link_nav" href="#contacts">Contact</a>
-                </li>
+                    class="change__caret">
+                    <path 
+                     fill-rule="evenodd" 
+                     clip-rule="evenodd" 
+                     d="M4.00406 3.8728L0.824164 0.692904L1.38985 0.127219L4.00406 2.74143L6.61827 0.127219L7.18396 0.692905L4.00406 3.8728Z" 
+                     fill="white"/>
+                  </svg> 
+                </div>
               </ul>
-            </nav>
-          </div>
-          <div class="cinematheatre_lng-change">
-            <select class="cinematheatre__select">
-              <option value="en" class="cinematheatre__select-en">EN</option>
-              <option value="ru" class="cinematheatre__select-ru">RU</option>
-            </select>
-            <img class="change__caret" src="./images/IconArrowDown.png">
+              <nav>
+                <ul class="cinematheatre__line cinematheatre__line_bottom">
+                  <li class="cinematheatre__item">
+                    <a class="cinematheatre__link cinematheatre__link_nav" href="#why">Почему мы?</a>
+                  </li>
+                  <li class="cinematheatre__item">
+                    <a class="cinematheatre__link cinematheatre__link_nav" href="#cinema"
+                      >Выберите фильм</a
+                    >
+                  </li>
+                  <li class="cinematheatre__item">
+                    <a class="cinematheatre__link cinematheatre__link_nav" href="#reviews">Отзывы</a>
+                  </li>
+                  <li class="cinematheatre__item">
+                    <a class="cinematheatre__link cinematheatre__link_nav" href="#products">Товары</a>
+                  </li>
+                  <li class="cinematheatre__item">
+                    <a class="cinematheatre__link cinematheatre__link_nav" href="#contacts">Contact</a>
+                  </li>
+                </ul>
+              </nav>
+            </div>
           </div>
         </header>
         <h1 class="cinematheatre__title">Закажите билет в кино</h1>
@@ -277,141 +294,144 @@
     <section id="cinema">
       <div class="container">
         <h2 class="header">Выберите фильм</h2>
-        <div class="table">
-          <div class="table__column1">
-            <div class="table__line table__borderleft"></div>
-            <div class="table__row_darkgrey">
-              <svg class="table__svg"
-                viewBox="0 0 11 9"
-                fill="none"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <path
-                  fill-rule="evenodd"
-                  clip-rule="evenodd"
-                  d="M4.60581 6.79378L1.46056 3.93033L0.787354 4.66979L4.70255 8.23421L10.8223 0.94099L10.0562 0.298203L4.60581 6.79378Z"
-                  fill="white"
-                />
-              </svg>
-            </div>
-            <div class="table__row_lightgrey">
-              <svg class="table__svg"
-                viewBox="0 0 11 9"
-                fill="none"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <path
-                  fill-rule="evenodd"
-                  clip-rule="evenodd"
-                  d="M4.60581 6.79378L1.46056 3.93033L0.787354 4.66979L4.70255 8.23421L10.8223 0.94099L10.0562 0.298203L4.60581 6.79378Z"
-                  fill="#A3CC40"
-                />
-              </svg>
-            </div>
-            <div class="table__row_darkgrey">
-              <svg class="table__svg"
-                viewBox="0 0 11 9"
-                fill="none"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <path
-                  fill-rule="evenodd"
-                  clip-rule="evenodd"
-                  d="M4.60581 6.79378L1.46056 3.93033L0.787354 4.66979L4.70255 8.23421L10.8223 0.94099L10.0562 0.298203L4.60581 6.79378Z"
-                  fill="white"
-                />
-              </svg>
-            </div>
-            <div class="table__row_lightgrey table__bottomleft">
-              <svg class="table__svg"
-                viewBox="0 0 11 9"
-                fill="none"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <path
-                  fill-rule="evenodd"
-                  clip-rule="evenodd"
-                  d="M4.60581 6.79378L1.46056 3.93033L0.787354 4.66979L4.70255 8.23421L10.8223 0.94099L10.0562 0.298203L4.60581 6.79378Z"
-                  fill="white"
-                />
-              </svg>
+        <div class="table__contain">
+          <div class="table__media">
+            <div class="table">
+              <div class="table__column1">
+                <div class="table__line table__borderleft"></div>
+                <div class="table__row_darkgrey">
+                  <svg class="table__svg"
+                    viewBox="0 0 11 9"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      fill-rule="evenodd"
+                      clip-rule="evenodd"
+                      d="M4.60581 6.79378L1.46056 3.93033L0.787354 4.66979L4.70255 8.23421L10.8223 0.94099L10.0562 0.298203L4.60581 6.79378Z"
+                      fill="white"
+                    />
+                  </svg>
+                </div>
+                <div class="table__row_lightgrey">
+                  <svg class="table__svg"
+                    viewBox="0 0 11 9"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      fill-rule="evenodd"
+                      clip-rule="evenodd"
+                      d="M4.60581 6.79378L1.46056 3.93033L0.787354 4.66979L4.70255 8.23421L10.8223 0.94099L10.0562 0.298203L4.60581 6.79378Z"
+                      fill="#A3CC40"
+                    />
+                  </svg>
+                </div>
+                <div class="table__row_darkgrey">
+                  <svg class="table__svg"
+                    viewBox="0 0 11 9"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      fill-rule="evenodd"
+                      clip-rule="evenodd"
+                      d="M4.60581 6.79378L1.46056 3.93033L0.787354 4.66979L4.70255 8.23421L10.8223 0.94099L10.0562 0.298203L4.60581 6.79378Z"
+                      fill="white"
+                    />
+                  </svg>
+                </div>
+                <div class="table__row_lightgrey table__bottomleft">
+                  <svg class="table__svg"
+                    viewBox="0 0 11 9"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      fill-rule="evenodd"
+                      clip-rule="evenodd"
+                      d="M4.60581 6.79378L1.46056 3.93033L0.787354 4.66979L4.70255 8.23421L10.8223 0.94099L10.0562 0.298203L4.60581 6.79378Z"
+                      fill="white"
+                    />
+                  </svg>
+                </div>
+              </div>
+              <div class="table__column">
+                <div class="table__line">
+                  Начало сеанса
+                  <svg
+                    class="table__arrow"
+                    viewBox="0 0 9 5"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M4.49182 0.5L8.49182 5H0.491821L4.49182 0.5Z"
+                      fill="white"
+                    />
+                  </svg>
+                </div>
+                <div class="table__row_darkgrey">10:00</div>
+                <div class="table__row_lightgrey">12:00</div>
+                <div class="table__row_darkgrey">14:00</div>
+                <div class="table__row_lightgrey">16:00</div>
+              </div>
+              <div class="table__column">
+                <div class="table__line">
+                  Название фильма
+                  <svg
+                    class="table__arrow"
+                    viewBox="0 0 9 5"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path d="M4 4.5L8 0H0L4 4.5Z" fill="white" />
+                  </svg>
+                </div>
+                <div class="table__row_darkgrey">
+                  <a
+                    class="table__link"
+                    href="https://www.kinopoisk.ru/film/1309570/"
+                    target="_blank"
+                    >Человек-паук</a
+                  >
+                </div>
+                <div class="table__row_lightgrey">
+                  <a
+                    class="table__link"
+                    href="https://www.kinopoisk.ru/film/1122114/"
+                    target="_blank"
+                    >Собачья жизнь 2</a
+                  >
+                </div>
+                <div class="table__row_darkgrey">
+                  <a
+                    class="table__link"
+                    href="https://www.kinopoisk.ru/film/846824/"
+                    target="_blank"
+                    >История игрушек 4</a
+                  >
+                </div>
+                <div class="table__row_lightgrey">
+                  <a
+                    class="table__link"
+                    href="https://www.kinopoisk.ru/film/693730/"
+                    target="_blank"
+                    >Люди в черном:Интернешнл</a
+                  >
+                </div>
+              </div>
+              <div class="table__column2">
+                <div class="table__line table__borderright">Жанр</div>
+                <div class="table__row_darkgrey">Фантастика,боевик,приключения</div>
+                <div class="table__row_lightgrey">Фэнтези,драма,комедия</div>
+                <div class="table__row_darkgrey">Мультфильм,фэнтези,комедия</div>
+                <div class="table__row_lightgrey table__bottomright">
+                  Фантастика,боевик,комедия
+                </div>
+              </div>
             </div>
           </div>
-          <div class="table__column">
-            <div class="table__line">
-              Начало сеанса
-              <svg
-                class="table__arrow"
-                viewBox="0 0 9 5"
-                fill="none"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <path
-                  d="M4.49182 0.5L8.49182 5H0.491821L4.49182 0.5Z"
-                  fill="white"
-                />
-              </svg>
-            </div>
-            <div class="table__row_darkgrey">10:00</div>
-            <div class="table__row_lightgrey">12:00</div>
-            <div class="table__row_darkgrey">14:00</div>
-            <div class="table__row_lightgrey">16:00</div>
-          </div>
-          <div class="table__column">
-            <div class="table__line">
-              Название фильма
-              <svg
-                class="table__arrow"
-                viewBox="0 0 9 5"
-                fill="none"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <path d="M4 4.5L8 0H0L4 4.5Z" fill="white" />
-              </svg>
-            </div>
-            <div class="table__row_darkgrey">
-              <a
-                class="table__link"
-                href="https://www.kinopoisk.ru/film/1309570/"
-                target="_blank"
-                >Человек-паук</a
-              >
-            </div>
-            <div class="table__row_lightgrey">
-              <a
-                class="table__link"
-                href="https://www.kinopoisk.ru/film/1122114/"
-                target="_blank"
-                >Собачья жизнь 2</a
-              >
-            </div>
-            <div class="table__row_darkgrey">
-              <a
-                class="table__link"
-                href="https://www.kinopoisk.ru/film/846824/"
-                target="_blank"
-                >История игрушек 4</a
-              >
-            </div>
-            <div class="table__row_lightgrey">
-              <a
-                class="table__link"
-                href="https://www.kinopoisk.ru/film/693730/"
-                target="_blank"
-                >Люди в черном:Интернешнл</a
-              >
-            </div>
-          </div>
-          <div class="table__column2">
-            <div class="table__line table__borderright">Жанр</div>
-            <div class="table__row_darkgrey">Фантастика,боевик,приключения</div>
-            <div class="table__row_lightgrey">Фэнтези,драма,комедия</div>
-            <div class="table__row_darkgrey">Мультфильм,фэнтези,комедия</div>
-            <div class="table__row_lightgrey table__bottomright">
-              Фантастика,боевик,комедия
-            </div>
-          </div>
-        </div>
         <div class="table__footer">
           Lorem ipsum dolor sit amet consectetur adipisicing elit. Corrupti
           ad ratione repudiandae debitis illum magni. Sapiente dolores ipsum
@@ -630,54 +650,54 @@
         </div>
       </div>
     </section>
-    <div class="container">
-        <div class="form"> 
-            <form class="form__content" action="order.php" enctype="multipart/form-data">
-              <h2 class="form__feedback-head">Обратная связь</h2>
-              <div class="form__feedback">
-                <label class="form__feedback-unfocus">
+    <div class="container container__form">
+      <div class="form"> 
+        <form class="form__content" action="order.php" enctype="multipart/form-data">
+          <h2 class="form__feedback-head">Обратная связь</h2>
+          <div class="form__feedback">
+            <label class="form__feedback-unfocus">
+              <input  class="form__feedback-input" type="text" id="name" required/>
+              <p class="form__feedback-label">Полное имя</p>
+            </label>
+          </div>
+          <!--<div class="form__feedback">
+                <label class="form__feedback-unfocus form__feedback-focus">
+                 <p class="form__feedback-label">Полное имя</p>
                   <input  class="form__feedback-input" type="text" id="name" required/>
-                  <p class="form__feedback-label">Полное имя</p>
                 </label>
-              </div>
-              <!--<div class="form__feedback">
-                   <label class="form__feedback-unfocus form__feedback-focus">
-                     <p class="form__feedback-label">Полное имя</p>
-                     <input  class="form__feedback-input" type="text" id="name" required/>
-                   </label>
-                 </div>-->
-              <div class="form__feedback-select">
-                <img class="form__feedback-caret" src="./images/seat.png">
-                <select class="form__feedback-seat" id="seat" name="place" required>
-                  <option value="">Выберите место</option>
-                  <option value="1">1</option>
-                  <option value="2">2</option>
-                  <option value="3">3</option>
-                  <option value="4">4</option>
-                  <option value="5">5</option>
-                  <option value="6">6</option>
-                  <option value="7">7</option>
-                  <option value="8">8</option>
-                  <option value="9">9</option>
-                  <option value="10">10</option>
-                </select>
-              </div>
-              <div class="form__feedback-div">
-                <label class="form__feedback-rewiew-unfocus">
-                  <textarea class="form__feedback-review" type="text" name="review" required></textarea>
-                  <p class="form__feedback-label2">Напишите отзыв</p>
-                </label>
-              </div>
-                <label class="form__feedback-check-label">
-                  <input class="form__feedback-check-input" type="checkbox" name="checkdan" id="checkbox" required />
-                  <div class="form__feedback-check"></div>
-                  <p class="form__feedback-span">Я согласен на обработку своих персональных данных</p>
-                </label>
-              <div>
-                <button class="form__feedback-button" type="submit">Отправить</button>
-              </div>
-            </form>
-        </div>
+              </div>-->
+          <div class="form__feedback-select">
+            <img class="form__feedback-caret" src="./images/seat.png">
+            <select class="form__feedback-seat" id="seat" name="place" required>
+              <option value="">Выберите место</option>
+              <option value="1">1</option>
+              <option value="2">2</option>
+              <option value="3">3</option>
+              <option value="4">4</option>
+              <option value="5">5</option>
+              <option value="6">6</option>
+              <option value="7">7</option>
+              <option value="8">8</option>
+              <option value="9">9</option>
+              <option value="10">10</option>
+            </select>
+          </div>
+          <div class="form__feedback-div">
+            <label class="form__feedback-rewiew-unfocus">
+              <textarea class="form__feedback-review" type="text" name="review" required></textarea>
+              <p class="form__feedback-label2">Напишите отзыв</p>
+            </label>
+          </div>
+            <label class="form__feedback-check-label">
+              <input class="form__feedback-check-input" type="checkbox" name="checkdan" id="checkbox" required />
+              <div class="form__feedback-check"></div>
+              <p class="form__feedback-span">Я согласен на обработку своих персональных данных</p>
+            </label>
+          <div>
+            <button class="form__feedback-button" type="submit">Отправить</button>
+          </div>
+        </form>
+      </div>
     </div>
     <div class="container container_footer">
      <img class="map" src="./images/karta_1.png" alt="Карта" />

@@ -8,11 +8,15 @@
 .container_cinematheatre{
     padding: 0 4.45rem;
 }
-.container container__gives{
+.container__gives{
     margin-right: 0;
     text-align: right;
 }
 .container_footer{
     padding: 0 3.75rem;
+}
+.container__form{
+    padding: 0 8.9rem;
+    width: 100%;
 }
    

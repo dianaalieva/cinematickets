@@ -1,0 +1,165 @@
+@media screen and (min-width:1920px)
+{
+    html{
+        font-size: 1.85vw;
+    }
+    .container{
+        max-width: 96rem;
+    }
+    
+}
+@media screen and (max-width:768px) 
+{
+    html{
+      font-size: 2.2vw;
+    }
+    .container{
+      max-width: none;
+      padding: 0 2.5rem;
+    }
+    .container_cinematheatre{
+      padding: 0 2.4rem;
+    }
+    .menu-btn{
+      display: flex;
+      align-items: center;
+      position: absolute;
+      top: 2.4rem;
+      right:2.4rem;
+      width: 1.5rem;
+      height: 1rem;
+      cursor: pointer;
+      z-index: 6;
+    }
+     
+    .menu-btn > span,
+    .menu-btn > span::before,
+    .menu-btn > span::after {
+      display: block;
+      position: absolute;
+      width: 100%;
+      height: 2px;
+      background-color: #fff;
+      transition-duration: .25s;
+    }
+    .menu-btn > span::before {
+      content: '';
+      top: -8px;
+    }
+    .menu-btn > span::after {
+      content: '';
+      top: 8px;
+    }
+     
+    .cinematheatre__up{
+      display: block;
+      position: fixed;
+      visibility: hidden;
+      top: 0;
+      right: -100%;
+      width: 30vw;
+      height: 100%;
+      margin: 0;
+      padding: 5rem 2.35rem;
+      background-color: #fff;
+      box-shadow: 1px 0px 6px rgba(0, 0, 0, .2);
+      transition-duration: 0.25s;
+      z-index: 5;
+    }
+      .cinematheatre__line {
+        display: flex;
+        flex-direction: column;
+        justify-content: left;
+        transition-duration: 0.25s;
+      }
+      .cinematheatre__line_top {
+        position: absolute;
+        top:50%;
+        display: flex;
+      }
+      .cinematheatre__line_bottom{
+        position: absolute;
+        top: 5rem;
+        display: flex;
+        flex-direction: column;
+    
+      }
+      .cinematheatre__call {
+        box-shadow: 0px 0px 0.25rem 0px #A3CC40;
+        color:rgba(163, 204, 64, 1); 
+      }
+      .cinematheatre__link {
+        color: #9B9B9B;
+      }
+      .cinematheatre__link_nav {
+        color: #4C4D4F;
+      }
+      .cinematheatre__item:nth-child(1),
+      .cinematheatre__item:nth-child(2),
+      .cinematheatre__item:nth-child(3),
+      .cinematheatre__item:nth-child(4),
+      .cinematheatre__item:nth-child(5){
+        margin-left: 0;
+        margin-bottom: 1.5rem;
+      }
+      .cinematheatre_lng-change {
+        position: fixed;
+        top: 2.6rem;
+        margin-left:0
+      }
+      .cinematheatre__select{
+        color:rgba(163, 204, 64, 1); 
+      }
+      .change__caret>path{
+        fill: #A3CC40;
+      }
+      .cinematheatre__select::-ms-expand{
+        display: none;
+      }
+      .cinematheatre__select-en{
+        color: rgb(184, 151, 151);
+      }
+      .cinematheatre__select-ru{
+        color: black;
+      }
+      .change__caret{
+        color: #A3CC40;
+      } 
+      #menu-toggle:checked ~ .menu-btn > span{
+        transform: rotate(45deg);
+        background-color:#A3CC40 ;
+      }
+      #menu-toggle:checked ~ .menu-btn > span::before{
+        top: 0;
+        transform: rotate(0);
+        background-color:#A3CC40 ;
+      }
+      #menu-toggle:checked ~ .menu-btn > span::after{
+        top: 0;
+        transform: rotate(90deg);
+        background-color:#A3CC40 ;
+      }
+      #menu-toggle:checked ~ .cinematheatre__up{
+        visibility: visible;
+        right: 0;
+      }
+      .cinema__welcome{
+        left: 25%;
+        top: 5.5rem;
+      }
+      .cinema__why{
+        left: 4.45rem;
+      }
+      .table__media{
+        overflow: auto;
+      }
+      .table{
+        min-width: 42rem;
+      }
+}
+@media screen and (max-width:576px)
+{
+    html{
+        font-size: 2.4vw;
+    }
+}

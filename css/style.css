@@ -30,6 +30,7 @@ html {
   .cinematheatre__header {
     display: flex;
     justify-content: space-between;
+    margin-bottom: 6.55rem;
   }
   .cinematheatre__logo{
     padding-top: 0.35rem
@@ -39,9 +40,11 @@ html {
     width: 7.8rem;
     height: 2rem;
   }
+  #menu-toggle{
+    display: none;
+  }
   .cinematheatre__up{
     white-space: nowrap;
-    margin: 0 6.25rem 6.55rem 0;
     flex-grow: 1;
   }
   .cinematheatre__line {
@@ -111,7 +114,9 @@ html {
   }
   .cinematheatre_lng-change {
     position: relative;
-    margin-left:0
+    margin-left:118px;
+    display: flex;
+    align-items: center;
   }
   .cinematheatre__select{
     background: none;
@@ -124,6 +129,7 @@ html {
     height: 0.8rem;
     -moz-appearance: none;
     -webkit-appearance: none;
+    width: 1.85rem;
   }
   .cinematheatre__select::-ms-expand{
     display: none;
@@ -135,11 +141,12 @@ html {
     color: black;
   }
   .change__caret{
+    position: absolute;
+    top: 50%;
+    right: 0;
     width: 0.4rem;
     height: 0.4rem;
-    position: absolute;
-    margin-left: 0.26rem;
-    top: 5%;
+    transform: translateY(-50%);
   }
   .cinematheatre__title {
     margin-bottom: 1.25rem;
@@ -342,8 +349,8 @@ html {
     position: absolute;
   }
   .box__image{
-    width: 13.8rem; 
-    height: 13.8rem;
+    width: 13rem; 
+    height: 13rem;
   }
   .gives__contain{
     width: 100%;
@@ -401,41 +408,6 @@ html {
     line-height: 0.715rem;
     padding-bottom: 2.75rem;
   }
-  .catalog{
-    width: 100%;
-    position: relative;
-    display: grid;
-    grid-template-rows: repeat(3,1fr);
-    grid-template-columns: repeat(3,1fr);
-    grid-template-areas: "img1 img2 img3"
-                         "img4 . img6"
-                         "img7 img8 img9";
-    
-  }
-  .catalog__image1{
-    grid-area: img1;
-  }
-  .catalog__image2{
-    grid-area: img2;
-  }
-  .catalog__image3{
-    grid-area: img3;
-  }
-  .catalog__image4{
-    grid-area: img4;
-  }
-  .catalog__image6{
-    grid-area: img6;
-  }
-  .catalog__image7{
-    grid-area: img7;
-  }
-  .catalog__image8{
-    grid-area: img8;
-  }
-  .catalog__image9{
-    grid-area: img9;
-  } 
   .catalog__image{
     position: relative;
     overflow: hidden;
@@ -566,14 +538,14 @@ html {
  
   .form{
     position: relative;
-    background-image: url(../images/form.jpg);
+    background-image: url(../images/form.png);
     background-repeat: no-repeat;
+    background-size: cover;
     width: 100%;
-    max-width: 38.35rem;
-    margin: 2.15rem auto 3.05rem;
     border-radius: 1rem;
-    box-shadow: 0 0.45rem 1.95rem 0px #3b25255e
-    
+    box-shadow: 0 0.45rem 1.95rem 0px #3b25255e;
+    margin-bottom: 3rem;
+    background-position:center;
   }
   
   .form__content{
@@ -820,6 +792,7 @@ html {
     color: #A3CC40;
   } 
   .map{
+   width: 100%;
    max-width: 100%;
    border-radius: 0.5rem;
   }
