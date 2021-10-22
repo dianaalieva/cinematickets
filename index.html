@@ -15,6 +15,12 @@
     <link rel="stylesheet" href="./css/components.css" />
     <link rel="stylesheet" href="./css/common_styles.css" />
     <link rel="stylesheet" href="./css/media_rules.css" />
+
+    <link rel="stylesheet" href="/css/owl.carousel.min.css">
+    <link rel="stylesheet" href="/css/owl.theme.default.min.css">
+    <script defer src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script defer src="/js/owl.carousel.min.js"></script>
+    <script defer src="/js/main.js"></script>
   </head>
   <body>
     <div class="cinematheatre">
@@ -634,19 +640,49 @@
           ipsum beatae repudiandae. Modi labore velit aspernatur blanditiis
           commodi dolorum culpa accusantium quidem.
         </div>
-        <div class="reviews__people">
-          <img class="reviews__foto"
-            src="images/elena.png"
-            alt="Елена Еленова"
-          />
-          <img class="reviews__boris"
-            src="images/boris.png"
-            alt="Борис Борисов"
-          />
-          <img class="reviews__foto"
-            src="images/leonardo.png"
-            alt="Леонардо ДиКаприо"
-          />
+        <div class="owl-carousel">
+          <div class="reviews__block">
+            <img class="reviews__photo"
+              src="/images/elena.png"
+              alt="Елена Еленова"
+            />
+            <div class="reviews__down">
+              <div class="reviews__name">Елена Еленова</div>
+              <div class="reviews__review">Lorem ipsum dolor sit, amet consectetur adipisicing elit. 
+                Ipsum consequatur ipsa ducimus labore vero adipisci aspernatur velit quaerat harum, 
+                quos impedit itaque amet, atque facilis aliquid inventore, error eligendi ea!
+              </div>
+              <div class="reviews__data">21.10.2021</div>
+            </div>
+          </div>
+          <div class="reviews__block">
+            <img class="reviews__photo"
+              src="images/boris.png"
+              alt="Борис Борисов"
+            />
+            <div class="reviews__down">
+              <div class="reviews__name">Борис Борисов</div>
+              <div class="reviews__review">Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+                Fugit sint porro molestiae saepe blanditiis molestias ea harum libero aliquid, 
+                ad laboriosam sit? Quae sequi nisi tenetur reiciendis incidunt est quia.
+              </div>
+              <div class="reviews__data">21.10.2021</div>
+            </div> 
+          </div>
+          <div class="reviews__block">
+            <img class="reviews__photo"
+              src="images/leonardo.png"
+              alt="Леонардо ДиКаприо"
+            />
+            <div class="reviews__down">
+              <div class="reviews__name">Леонардо ДиКаприо</div>
+              <div class="reviews__review">Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+                Adipisci sequi quas consequuntur, perferendis minus itaque nemo voluptatem architecto ipsa 
+                eligendi praesentium sunt! Vel facilis aut, beatae rem officia excepturi nisi.
+              </div>
+              <div class="reviews__data">21.10.2021</div>
+            </div>
+          </div>
         </div>
       </div>
     </section>

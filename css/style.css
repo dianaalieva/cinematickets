@@ -506,6 +506,7 @@ html {
     background-repeat: no-repeat;
     position: relative;
     margin-bottom: 2.15rem;
+    padding-bottom: 7.5rem;
   }
   .reviews__head{
     font-weight: 500;
@@ -520,22 +521,44 @@ html {
     color: #ffffff;
     padding-bottom: 2.75rem;
   }
-  .reviews__people{
-    display:inline-flex;
-  }
-  .reviews__boris{
-    padding: 3.75rem 4.45rem 7.15rem;
-    width: 100%;
-    max-width: 12.3rem;
-    height: 16.6rem;
-  }
-  .reviews__foto{
-    padding: 4.95rem 0 8.35rem;
-    width: 100%;
+  .reviews__block{
     max-width: 10.5rem;
-    height: 14.2rem;
+    max-height: 14.2rem;
   }
- 
+  .reviews__photo{
+    max-width: 100%;
+    max-height: 60%;
+  }
+  .reviews__down{
+    background-color: #A3CC40;
+    border-bottom-left-radius: 0.45rem;
+    border-bottom-right-radius: 0.45rem;
+    border-collapse: collapse;
+    padding: 0.86rem 0.43rem 0.25rem ;
+  }
+  .reviews__name{
+    font-size: 0.75rem;
+    font-weight: 600;
+    line-height: 1rem;
+    text-align: left;
+    color: #ffffff;
+    margin-bottom: 0.67rem;
+  }
+  .reviews__review{
+    font-size: 0.5rem;
+    font-weight: 400;
+    line-height: 0.65rem;
+    text-align: left;
+    color: #ffffff;
+    margin-bottom: 0.47rem;
+  }
+  .reviews__data{
+    font-size: 0.4rem;
+    font-weight: 300;
+    line-height: 0.5rem;
+    text-align: right;
+    color: #ffffff;
+  }
   .form{
     position: relative;
     background-image: url(../images/form.png);
