@@ -232,81 +232,74 @@ html {
     color: rgba(163, 204, 64, 1);
     padding: 5.9rem 0 4.45rem 0;
   }
-  .table {
-    display: flex;
-    border-collapse: collapse;
-    border: 0;
+  .table{
+    border-collapse: separate;
     width: 100%;
   }
-  .table__column1{
-    flex: none;
+  
+  .table__row:first-child .table__line:first-child { 
+    border-top-left-radius: 0.5rem; 
   }
-  .table__column1 div{
+  .table__row:first-child .table__line:last-child { 
+    border-top-right-radius: 0.5rem; 
+  }
+  .table__row:last-child .table__column:first-child { 
+    border-bottom-left-radius: 0.5rem; 
+  }
+  .table__row:last-child .table__column:last-child { 
+    border-bottom-right-radius: 0.5rem; 
+  }
+  .table__row{
     height: 2.25rem;
-    line-height: 2.25rem;
   }
-  .table__column {
-    flex: 1;
-    font-style: normal;
-    font-size: 0.7rem;
-    font-weight: 400;
-    color: white;
-  }
-  .table__column2{
-    flex: none;
-    font-style: normal;
-    font-size: 0.7rem;
-    font-weight: 400;
-    color: white;
-  }
-  .table__column2 div{
-    padding-right: 3rem;
-    height: 2.25rem;
-    line-height: 2.25rem
-  }
-  .table__column div{
-    height: 2.25rem;
-    line-height: 2.25rem;
-  }
-  .table__row_darkgrey {
-    background-color: rgba(55, 55, 55, 1);
-  }
-  .table__row_lightgrey {
-    background-color: rgba(76, 77, 79, 1);
-  }
-  .table__borderright {
-    border-top-right-radius: 0.5rem;
-  }
-  .table__borderleft {
-    border-top-left-radius: 0.5rem;
-  }
-  .table__bottomright {
-    border-bottom-right-radius: 0.5rem;
-  }
-  .table__bottomleft {
-    border-bottom-left-radius: 0.5rem;
-  }
-  .table__line {
-    background-color: rgba(163, 204, 64, 1);;
-    font-style: normal;
-    font-size: 1rem;
-    font-weight: 600;
-  }
-  .table__svg{
+  .table__row svg{
     width: 100%;
     max-width: 0.55rem;
     height: 0.45rem;
-    padding: 0 2.26rem 0 1.24rem;
   }
-  .table__arrow {
-    width: 100%;
-    max-width: 0.45rem;
-    height: 0.25rem;
+  .table__row:nth-child(2n+1){
+    background-color: rgba(55, 55, 55, 1);
+  }
+  .table__row:nth-child(2n){
+    background-color: rgba(76, 77, 79, 1);
+  }
+  
+  .table__line {
+    font-style: normal;
+    font-size: 1rem;
+    font-weight: 600;
+    color: white;
+    text-align-last: left;
+    padding-left: 0.5rem;
+    vertical-align: middle;
+    background-color: rgba(163, 204, 64, 1); 
+  }
+  .film-name{
+    padding-left: 3.5rem;
+  }
+  
+  .table__column {
+    font-style: normal;
+    font-size: 0.7rem;
+    font-weight: 400;
+    color: white;
+    padding-left: 0.5rem;
     vertical-align: middle;
   }
-  .table__link {
+  .table__column_check {
+    padding-left: 1.25rem;
+  }
+  .table__column_time {
     color: white;
-    text-decoration: none;
+  }
+  .table__arrow {
+    padding-left: 0.25rem;
+    padding-bottom: 2px;
+    width: 0.45rem;
+    height: 0.25rem;
+  }
+  .tfoot{
+    position: static;
   }
   .table__footer {
     font-style: normal;
@@ -314,8 +307,7 @@ html {
     font-size: 0.55rem;
     text-align: center;
     padding: 1.5rem 7rem 0;
-
-  }
+  }   
   .gives{
     background-size: cover;
     width: 100%;
@@ -523,7 +515,6 @@ html {
   }
   .reviews__block{
     max-width: 10.5rem;
-    max-height: 14.2rem;
   }
   .reviews__photo{
     max-width: 100%;
