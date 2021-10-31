@@ -19,15 +19,56 @@ const films = [
         name:"Люди в черном:Интернешнл",
         genres:["фантастика","боевик","комедия"],
     },
+    {
+        time:"18:00",
+        name:"Человек-паук2",
+        genres:["фантастика","боевик","приключения"],
+    },
+    {
+        time:"20:00",
+        adult:true,
+        name:"Собачья жизнь 3",
+        genres:["фэнтези","драма","комедия"],
+    },
+    {
+        time:"22:00",
+        name:"История игрушек",
+        genres:["мультфильм","фэнтези","комедия"],
+    },
+    {
+        time:"00:00",
+        adult:true,
+        name:"Люди в черном",
+        genres:["фантастика","боевик","комедия"],
+    },
 ];
 
 let tbody=document.getElementById("table-body");
-console.log(tbody.innerHTML);
 tbody.innerHTML="";
-for(let index=0;index<films.length;index++){
-    tbody.innerHTML+=`
-    <tr class="table__row">
-                    <td class="table__column table__column_check">
+const filmHelper={
+  getId(){
+    return this.id || `${this.name.replaceAll(" ","-")}-${this.time}`;
+  },
+  getTitle(){
+    return this.name;
+  },
+  getTime(){
+    return this.time;
+  },
+  getGenres(){
+    return this.genres.join(", ");
+  }
+};
+function renderFilmTableItem(film){
+  return `
+  <tr class="table__row">
+                  <td class="table__column table__column_check">
+                    <input
+                      type="checkbox"
+                      class="table__check"
+                      id="${filmHelper.getId.apply(film)}"
+                    />
+                    <label for="${filmHelper.getId.apply(film)}">
                       <svg
                         viewBox="0 0 11 9"
                         fill="none"
@@ -40,9 +81,15 @@ for(let index=0;index<films.length;index++){
                           fill="white"
                         />
                       </svg>
-                    </td>
-                    <td class="table__column table__column_time">${films[index].time}</td>
-                    <td class="table__column">${films[index].name}</td>
-                    <td class="table__column">${films[index].genres.join(', ')}</td>
-                  </tr>`;
+                    </label>
+                  </td>
+                  <td class="table__column table__column_time">${filmHelper.getTime.apply(film)}</td>
+                  <td class="table__column">${filmHelper.getTitle.apply(film)}</td>
+                  <td class="table__column">${filmHelper.getGenres.apply(film)}</td>
+                </tr>`;
+}
+for(let film of films){
+    if (!(film.adult===true || film.adult===true)){
+      tbody.innerHTML+=renderFilmTableItem(film);
+    }
 }

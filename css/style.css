@@ -513,19 +513,32 @@ html {
     color: #ffffff;
     padding-bottom: 2.75rem;
   }
+  .owl-stage{
+    display: flex;
+  }
+  .owl-item.active.center .reviews__block{
+    transform: scale(1.1);
+    transition: 0.3s;
+  }
+  .owl-stage-outer{
+    padding: 1rem 0;
+  }
   .reviews__block{
+    display: flex;
+    flex-direction: column;
     max-width: 10.5rem;
+    background-color: #A3CC40;
+    border-radius: 0.45rem;
+    padding-bottom: 0.25rem ;
+    height: 100%;
+    margin: 0 auto;
+    transition: 0.3s;
+    box-sizing: border-box;
   }
   .reviews__photo{
     max-width: 100%;
     max-height: 60%;
-  }
-  .reviews__down{
-    background-color: #A3CC40;
-    border-bottom-left-radius: 0.45rem;
-    border-bottom-right-radius: 0.45rem;
-    border-collapse: collapse;
-    padding: 0.86rem 0.43rem 0.25rem ;
+    margin-bottom: 0.86rem;
   }
   .reviews__name{
     font-size: 0.75rem;
@@ -534,6 +547,7 @@ html {
     text-align: left;
     color: #ffffff;
     margin-bottom: 0.67rem;
+    padding: 0 0.43rem;
   }
   .reviews__review{
     font-size: 0.5rem;
@@ -542,6 +556,7 @@ html {
     text-align: left;
     color: #ffffff;
     margin-bottom: 0.47rem;
+    padding: 0 0.43rem;
   }
   .reviews__data{
     font-size: 0.4rem;
@@ -549,6 +564,8 @@ html {
     line-height: 0.5rem;
     text-align: right;
     color: #ffffff;
+    padding: 0 0.43rem;
+    margin-top: auto;
   }
   .form{
     position: relative;
@@ -951,6 +968,26 @@ html {
   .down__rights{
   margin-top: 1.75rem;
   color: #ffffff;
+  }
+  .owl-item .active .center{
+    -webkit-transform: scale(1.1);
+    -moz-transform: scale(1.1);
+    -o-transform: scale(1.1);
+  }.owl-carousel .owl-nav button.owl-prev{
+    position: absolute;
+    top: 16%;
+    left: 31%;
+  }
+  .owl-carousel .owl-nav button.owl-next{
+    position: absolute;
+    top: 16%;
+    left: 67%; 
+  }
+  .owl-carousel .owl-dots.disabled,
+  .owl-carousel .owl-nav.disabled {
+    color: #A3CC40;
+    font-size: 2rem;
+    font-weight: 300;
   }
 
 
