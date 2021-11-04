@@ -1,17 +1,20 @@
-const add = (a, b) => a + b;
+const add = (a, b) =>{
+    if(isNaN(a)||isNaN(b))return 0;
+    return +(a||0) + +(b||0);
+};
 
 /*
     Измените функцию add таким образом, чтобы
     все условия ниже вывели в консоль true
 */
-console.log(add(1, 2) === 3);
-console.log(add(1, +'2') === 3);
-console.log(add(+'1', 3) === 4);
-console.log(add(+'2', +'2') === 4);
-// console.log(add(NaN, 2) == 0);
-console.log(add('', 2) == 2);
-console.log(add(0,0) === 0);
-console.log(add(true, true) === 2);
+//  console.log(add(1, 2) === 3);
+//  console.log(add(1, '2') === 3);
+//  console.log(add('1', 3) === 4);
+//  console.log(add('2', '2') === 4);
+//  console.log(add(NaN, 2) === 0);
+//  console.log(add('', 2) === 2);
+//  console.log(add() === 0);
+//  console.log(add(true, true) === 2);
 
 const arr = [
     { rating: "96%", cost: 41.3, name: "Дюна" },
@@ -35,20 +38,25 @@ const arr = [
     { rating: "88%", cost: 37.6, name: "Неизведанное: Удача Дрейка" },
     { rating: "88%", cost: 36.5, name: "Топ Ган: Мэверик" },
 ]
-const arr=arr.map(Number)(cost=> {
-    if (rating>92){
-      return (cost*2)
+const arr2=arr.map(item=> {
+    const rating=item.rating.replace("%","");
+    const ratingNumber=+rating
+    if(ratingNumber>=92){ 
+        return {rating:item.rating,cost:item.cost*2,name:item.name}
     }
+    else
+    if(ratingNumber>=90) {
+        return {rating:item.rating,cost:item.cost,name:item.name}
+        
+    }
+    
     /**
      * Опишите функцию для map таким образом,
      * что бы у фильмов с рейтингом 92 и более %, цена (cost) увеличилась в два раза.
      */
 });
-const arrElements=arr.filter((film,rating)=>{
-    if(rating>90){
-        return {film}
-    }
-})
+console.log(arr2);
+
 
 /**
  * Отфильтруйте фильмы с рейтингом ниже 90%.

@@ -18,10 +18,16 @@
 
     <link rel="stylesheet" href="/css/owl.carousel.min.css">
     <link rel="stylesheet" href="/css/owl.theme.default.min.css">
+
     <script defer src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-    <script defer src="/js/owl.carousel.min.js"></script>
-    <script defer src="/js/main.js"></script>
-    <script defer src="/js/cinema_table.js"></script>
+    <script defer src="/libs/owl.carousel.min.js"></script>
+    <script defer src="/target/utils.js"></script>
+
+    <script defer src="/target/film.js"></script>
+    <script defer src="/target/main.js"></script>
+    <script defer src="/target/cinema_table.js"></script>
+    <script defer src="/target/cinema_popup.js"></script>
+    <script defer src="/target/tdd-utils.js"></script>
   </head>
   <body>
     <div class="cinematheatre">
@@ -480,7 +486,7 @@
               reprehenderit ab vitae atque est autem obcaecati. Assumenda!
             </div>
             </div>
-            <button class="gives__button">Получить подарок</button>
+            <button id="popup-open" class="gives__button">Получить подарок</button>
           </div>
         </div>
       </div>
@@ -692,21 +698,16 @@
         <form class="form__content" action="order.php" enctype="multipart/form-data">
           <h2 class="form__feedback-head">Обратная связь</h2>
           <div class="form__feedback">
-            <label class="form__feedback-unfocus">
-              <input  class="form__feedback-input" type="text" id="name" required/>
+            <div class="form__input form__feedback-focus form__feedback-error">
               <p class="form__feedback-label">Полное имя</p>
-            </label>
+              <input type="text" name="name"  class="form__feedback-input required" value="John"/>
+              <p class="form__feedback-error-msg">Error massage</p>
+            </div>
           </div>
-          <!--<div class="form__feedback">
-                <label class="form__feedback-unfocus form__feedback-focus">
-                 <p class="form__feedback-label">Полное имя</p>
-                  <input  class="form__feedback-input" type="text" id="name" required/>
-                </label>
-              </div>-->
           <div class="form__feedback-select">
             <img class="form__feedback-caret" src="./images/seat.png">
             <select class="form__feedback-seat" id="seat" name="place" required>
-              <option value="">Выберите место</option>
+              <option value="none"disabled selected>Выберите место</option>
               <option value="1">1</option>
               <option value="2">2</option>
               <option value="3">3</option>
@@ -719,17 +720,18 @@
               <option value="10">10</option>
             </select>
           </div>
-          <div class="form__feedback-div">
-            <label class="form__feedback-rewiew-unfocus">
-              <textarea class="form__feedback-review" type="text" name="review" required></textarea>
+          <div class="form__feedback">
+            <div class="form__input form__feedback-focus form__feedback-error">
               <p class="form__feedback-label2">Напишите отзыв</p>
-            </label>
+              <textarea class="form__feedback-input required" type="text" name="review"></textarea>
+              <p class="form__feedback-error-msg">Error massage</p>
+            </div>
           </div>
-            <label class="form__feedback-check-label">
-              <input class="form__feedback-check-input" type="checkbox" name="checkdan" id="checkbox" required />
-              <div class="form__feedback-check"></div>
-              <p class="form__feedback-span">Я согласен на обработку своих персональных данных</p>
-            </label>
+          <label class="form__feedback-check-label">
+            <input class="form__feedback-check-input" type="checkbox" name="checkdan" id="checkbox" required />
+            <div class="form__feedback-check"></div>
+            <p class="form__feedback-span">Я согласен на обработку своих персональных данных</p>
+          </label>
           <div>
             <button class="form__feedback-button" type="submit">Отправить</button>
           </div>
@@ -918,5 +920,49 @@
         </div>
       </div>
     </footer>
+    <form id="prize-popup" class="popup hidden">
+      <div class="popup__form">
+        <div id="popup-close" class="popup__form-close">
+          <svg width="35" height="35" viewBox="0 0 35 35" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <circle cx="17.5" cy="17.5" r="17.5" fill="#A3CC40"/>
+            <path d="M25.5363 11.8271L23.9176 10.2084L17.5 16.626L11.0824 10.2084L9.46362 11.8271L15.8812 18.2447L9.46362 24.6623L11.0824 26.2811L17.5 19.8635L23.9176 26.2811L25.5363 24.6623L19.1187 18.2447L25.5363 11.8271Z" fill="white"/>
+          </svg>
+        </div>
+        <div class="popup__form-wrapper">
+          <div class="popup__form-inputs">
+            <div class="popup__form-input">
+              <div class="form__popup form__popup-focus form__popup-error">
+                <p class="form__popup-label">Полное имя</p>
+                <input type="text" name="name"  class="form__popup-input required" value="John"/>
+                <p class="form__popup-error-msg">Error massage</p>
+              </div>
+            </div>
+            <div class="popup__form-input">
+              <div class="form__popup form__popup-focus form__popup-error">
+                <p class="form__popup-label">Email</p>
+                <input  type="text" name="email" class="form__popup-input required" value="name@email.com"/>
+                <p class="form__popup-error-msg">Error massage</p>
+              </div>
+            </div>
+          </div>
+          <div class="form__feedback-select">
+            <img class="form__feedback-caret" src="./images/seat.png">
+            <select class="form__feedback-seat" id="prize" name="free" required>
+              <option value="none" disabled selected>Выберите подарок</option>
+              <option value="doublePopcorn">Удвоим попкорн</option>
+              <option value="thirdTicket">Третий билет бесплатно</option>
+            </select>
+          </div>
+          <label class="form__feedback-check-label">
+            <input class="form__feedback-check-input" type="checkbox" name="checkdan" id="checkbox"/>
+            <div class="form__feedback-check"></div>
+            <p class="form__feedback-span">Я согласен на обработку своих персональных данных</p>
+          </label>
+          <div>
+            <button type="submit" class="form__feedback-button" type="submit">Отправить</button>
+          </div>
+        </div>
+      </div>
+    </form>
   </body>
 </html>
