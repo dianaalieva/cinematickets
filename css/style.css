@@ -594,6 +594,7 @@ html {
     line-height: 1rem;
     text-align: center;
   }
+  .form__textarea,
   .form__input{
     position: relative;
     background-color: #DEDEDE;
@@ -602,26 +603,29 @@ html {
     transition: 0.3s;
     margin-bottom: 1rem; 
   }
-  .form__feedback-focus .form__feedback-label{
+  .feedback__input-focus .form__feedback-label{
     background-color: #ffffff;
     transition: 0.3s;
-    transform: translateY(-230%);
+    transform: translateY(-210%);
     
   }
-  .form__feedback-focus .form__feedback-label2{
+  .feedback__textarea-focus .form__feedback-label2{
     background-color: #ffffff;
     transition: 0.3s;
-    transform: translateY(-280%);
+    transform: translateY(-265%);
     
   }
-  .form__feedback-focus{
+  .feedback__textarea-focus,
+  .feedback__input-focus{
     box-shadow: 0 0 0 0.2rem rgba(170, 243, 77, 0.52);
     transition: 0.3s;
     background-color: #ffffff;
   }
-  .form__feedback-error{
+  .feedback__textarea-error,
+  .feedback__input-error{
     box-shadow: 0 0 0 0.2rem rgba(191, 48, 48, 0.52);
   }
+  .form__feedback-textarea,
   .form__feedback-input{
     color: #A1A1A1;
     font-weight: 400;
@@ -655,14 +659,15 @@ html {
     transition: 0.3s;
     left: 0.6rem;
   } 
-  .form__feedback-input:focus ~ .form__feedback-label2{
+  .form__feedback-textarea:focus ~ .form__feedback-label2{
     top:0;
     background-color: #ffffff;
     padding: 0 0.4rem;
     transition: 0.3s;
     left: 0.6rem;
   } 
-  .form__feedback-error-msg{
+  .form__input-error-msg,
+  .form__textarea-error-msg{
     font-weight: 400;
     font-size: 0.55rem;
     line-height: 0.7rem;
@@ -751,6 +756,7 @@ html {
     opacity: 1;
   }
   .form__feedback-span{
+    cursor: pointer;
     font-weight: normal;
     font-size: 0.5rem;
     line-height: 0.65rem;
@@ -925,6 +931,7 @@ html {
     top: 0;
     bottom: 0;
     background-color: rgba(51,51,51,0.24);
+    z-index: 10;
   }
   .hidden{
     display: none;
@@ -1007,6 +1014,7 @@ html {
     padding: 0.2rem;
   }
   .popup__form-close{
+    cursor: pointer;
     position: absolute;
     right: 0.7rem;
     top: 0.7rem;

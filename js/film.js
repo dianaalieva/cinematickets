@@ -2,7 +2,7 @@ class Film{
 
    constructor(filmData){
     this._data=filmData;
-    this.time=`${getTime(9,22)}:${getTime(0,60)}`;
+    this._data.time=`${getTime(9,22)}:${getTime(0,60)}`;
    }
 
    isNotForAdult(){
@@ -12,6 +12,7 @@ class Film{
     return this._data.title||this._data.name;   
    }
    getTime(){
+     console.log (this._data);
     return this._data.time; 
    }
    getId(){
@@ -48,8 +49,9 @@ class Film{
                     <td class="table__column">${this.getTitle()}</td>
                     <td class="table__column">${this.getGenres()}</td>
     </tr>`; 
-   }
+   };
 } 
+
 
 
 

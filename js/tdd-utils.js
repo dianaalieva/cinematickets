@@ -42,13 +42,12 @@ const arr2=arr.map(item=> {
     const rating=item.rating.replace("%","");
     const ratingNumber=+rating
     if(ratingNumber>=92){ 
-        return {rating:item.rating,cost:item.cost*2,name:item.name}
-    }
-    else
-    if(ratingNumber>=90) {
-        return {rating:item.rating,cost:item.cost,name:item.name}
-        
-    }
+        return {rating:item.rating,
+                cost:item.cost*2,
+                name:item.name
+        };
+    } else return item;
+    
     
     /**
      * Опишите функцию для map таким образом,

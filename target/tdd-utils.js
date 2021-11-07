@@ -109,13 +109,7 @@ var arr2 = arr.map(function (item) {
       cost: item.cost * 2,
       name: item.name
     };
-  } else if (ratingNumber >= 90) {
-    return {
-      rating: item.rating,
-      cost: item.cost,
-      name: item.name
-    };
-  }
+  } else return item;
   /**
    * Опишите функцию для map таким образом,
    * что бы у фильмов с рейтингом 92 и более %, цена (cost) увеличилась в два раза.

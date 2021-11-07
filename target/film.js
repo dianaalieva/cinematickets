@@ -11,7 +11,7 @@ var Film = /*#__PURE__*/function () {
     _classCallCheck(this, Film);
 
     this._data = filmData;
-    this.time = "".concat(getTime(9, 22), ":").concat(getTime(0, 60));
+    this._data.time = "".concat(getTime(9, 22), ":").concat(getTime(0, 60));
   }
 
   _createClass(Film, [{
@@ -27,6 +27,7 @@ var Film = /*#__PURE__*/function () {
   }, {
     key: "getTime",
     value: function getTime() {
+      console.log(this._data);
       return this._data.time;
     }
   }, {
