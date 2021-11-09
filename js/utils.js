@@ -3,5 +3,5 @@ function getRandomTime(maxValue){
 };
 
 function getTime(minValue,maxValue){
-    return String(minValue+getRandomTime(maxValue)).padStart(2,"0")
+    return String(minValue/1+getRandomTime(maxValue/1)).padStart(2,"0")
 };

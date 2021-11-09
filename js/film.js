@@ -2,7 +2,7 @@ class Film{
 
    constructor(filmData){
     this._data=filmData;
-    this._data.time=`${getTime(9,22)}:${getTime(0,60)}`;
+    this._data.time=`${getTime( 9 , 22)}:${getTime( 0 , 60)}`;
    }
 
    isNotForAdult(){
