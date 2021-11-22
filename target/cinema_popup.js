@@ -6,88 +6,84 @@ var closeButton = document.querySelector('#popup-close');
 var nameInputWrapper = document.querySelector('#prize-popup input[name="name"]').parentNode;
 var emailInputWrapper = document.querySelector('#prize-popup input[name="email"]').parentNode;
 var prizeSelect = document.querySelector('#prize');
-var INPUT_ERROR_CLASS = 'form__popup-error';
-var INPUT_FOCUS_CLASS = 'form__popup-focus';
+var ERROR_CLASS = 'form__popup-error';
+var FOCUS_CLASS = 'form__popup-focus';
 
 function popupToggle() {
   prizeForm.classList.toggle('hidden');
 }
 
-function initializeField(field) {
-  var input = field.getElementsByTagName('input')[0];
-  var errorText = field.querySelector('.form__popup-error-msg');
-  clearError();
-  field.classList.remove(INPUT_FOCUS_CLASS);
-  input.value = '';
+function initializeField() {
+  var popupInput = document.getElementsByTagName('input')[0];
+  var popupErrorText = document.querySelector('.form__popup-error-msg');
+
+  function clearFocus() {
+    prizeForm.classList.remove(FOCUS_CLASS);
+    popupInput.value = '';
+  }
+
+  clearFocus();
 
   function clearError() {
-    field.classList.remove(INPUT_ERROR_CLASS);
-    errorText.innerText = '';
+    prizeForm.classList.remove(ERROR_CLASS);
+    popupErrorText.innerText = '';
   }
 
   ;
-  input.addEventListener('focus', function () {
-    field.classList.add(INPUT_FOCUS_CLASS);
+  popupInput.addEventListener('focus', function () {
+    prizeForm.classList.add(FOCUS_CLASS);
   });
-  input.addEventListener('input', function () {
+  popupInput.addEventListener('input', function () {
     clearError();
   });
-  input.addEventListener('blur', function () {
-    if (!input.value) {
-      field.classList.remove(INPUT_FOCUS_CLASS);
+  popupInput.addEventListener('blur', function () {
+    if (!popupInput.value) {
+      clearFocus();
     }
 
     ;
   });
   return {
     focus: function focus() {
-      input.focus();
+      prizeForm.classList.add(FOCUS_CLASS);
     },
     getValue: function getValue() {
-      return input.value;
+      return popupInput.value;
     },
     setError: function setError(error) {
-      errorText.innerText = error;
-      field.classList.add(INPUT_ERROR_CLASS);
+      popupErrorText.innerText = error;
+      prizeForm.classList.add(ERROR_CLASS);
     }
   };
 }
 
 ;
-var nameField = initializeField(nameInputWrapper);
-var emailField = initializeField(emailInputWrapper);
+var Field = initializeField();
 
 openButton.onclick = function () {
   popupToggle();
-  nameField.focus();
+  nameInputWrapper.focus();
 };
 
 closeButton.onclick = popupToggle;
 prizeForm.addEventListener('submit', function (event) {
   event.preventDefault();
-  var nameValue = nameField.getValue();
-  var emailValue = emailField.getValue();
+  var popupValue = Field.getValue();
 
-  if (!nameValue) {
-    nameField.setError('не заполнено');
-    nameField.focus();
-    return;
-  }
-
-  if (!emailValue) {
-    emailField.setError('не заполнено');
-    emailField.focus();
+  if (!popupValue) {
+    Field.setError('не заполнено');
+    Field.focus();
     return;
   }
 
   if (prizeSelect.value === "none") {
-    prizeSelect.classList.add(INPUT_ERROR_CLASS);
+    prizeSelect.classList.add(ERROR_CLASS);
     return;
   }
 
   var data = {
-    name: nameValue,
-    email: emailValue,
+    name: popupValue,
+    email: popupValue,
     free: prizeSelect.value
   };
   var url = new URL('http://inno-ijl.ru/multystub/stc-21-03/feedback');

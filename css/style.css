@@ -604,26 +604,24 @@ html {
     transition: 0.3s;
     margin-bottom: 1rem; 
   }
-  .feedback__input-focus .form__feedback-label{
+  .feedback__focus .form__feedback-label{
     background-color: #ffffff;
     transition: 0.3s;
     transform: translateY(-210%);
     
   }
-  .feedback__textarea-focus .form__feedback-label2{
+  .feedback__focus .form__feedback-label2{
     background-color: #ffffff;
     transition: 0.3s;
     transform: translateY(-265%);
     
   }
-  .feedback__textarea-focus,
-  .feedback__input-focus{
+  .feedback__focus{
     box-shadow: 0 0 0 0.2rem rgba(170, 243, 77, 0.52);
     transition: 0.3s;
     background-color: #ffffff;
   }
-  .feedback__textarea-error,
-  .feedback__input-error{
+  .feedback__error{
     box-shadow: 0 0 0 0.2rem rgba(191, 48, 48, 0.52);
   }
   .form__feedback-textarea,
@@ -667,8 +665,7 @@ html {
     transition: 0.3s;
     left: 0.6rem;
   } 
-  .form__input-error-msg,
-  .form__textarea-error-msg{
+  .form__error-msg{
     font-weight: 400;
     font-size: 0.55rem;
     line-height: 0.7rem;
@@ -704,6 +701,8 @@ html {
   }
   .form__input:focus,
   .form__input:hover,
+  .form__textarea:focus,
+  .form__textarea:hover,
   .form__feedback-seat:focus,
   .form__feedback-seat:hover{
     background-color: #ffffff;
@@ -945,7 +944,8 @@ html {
     margin: 2rem auto;
     border-radius: 2rem;
   }
-  .form__popup{
+  .form__popup,
+  .form__popup2{
     position: relative;
     background-color: #DEDEDE;
     border-radius: 0.25rem;

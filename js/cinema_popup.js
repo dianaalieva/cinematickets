@@ -1,88 +1,102 @@
 const prizeForm=document.getElementById('prize-popup');
 const openButton=document.querySelector('#popup-open');
 const closeButton=document.querySelector('#popup-close');
-const nameInputWrapper=document.querySelector('#prize-popup input[name="name"]').parentNode;
-const emailInputWrapper=document.querySelector('#prize-popup input[name="email"]').parentNode;
+const nameInputWrapper=document.querySelector('.form__popup');
+const emailInputWrapper=document.querySelector('.form__popup2');
 const prizeSelect=document.querySelector('#prize');
 
-const INPUT_ERROR_CLASS='form__popup-error';
-const INPUT_FOCUS_CLASS='form__popup-focus';
+const POPUP_ERROR_CLASS='form__popup-error';
+const POPUP_FOCUS_CLASS='form__popup-focus';
+
 
 function popupToggle(){
     prizeForm.classList.toggle('hidden');
 }
-function initializeField(field){
-    const input= field.getElementsByTagName('input')[0];
-    const errorText= field.querySelector('.form__popup-error-msg');
-    clearError();
-    field.classList.remove(INPUT_FOCUS_CLASS);
-    input.value='';
+function initializeField(popupInput){
+    const pInput= popupInput.getElementsByTagName('input')[0];
+    const popupErrorText= popupInput.querySelector('.form__popup-error-msg');
 
-    function clearError(){
-        field.classList.remove(INPUT_ERROR_CLASS);
-        errorText.innerText='';
+    function pRemError(){
+        popupInput.classList.remove(POPUP_ERROR_CLASS);
+        popupErrorText.innerText='';
     };
+    pRemError();
+    function pRemFocus(){
+        popupInput.classList.remove(POPUP_FOCUS_CLASS);
+        pInput.value='';
+    };
+    
 
-    input.addEventListener('focus',function(){
-        field.classList.add(INPUT_FOCUS_CLASS);
+    pInput.addEventListener('focus',function(){
+        popupInput.classList.add(POPUP_FOCUS_CLASS);
+        
     });
-    input.addEventListener('input',function(){
-        clearError();
+    pInput.addEventListener('input',function(){
+        pRemError();
     });
-    input.addEventListener('blur',function(){
-        if(!input.value){
-          field.classList.remove(INPUT_FOCUS_CLASS);
+    pInput.addEventListener('blur',function(){
+        if(!pInput.value){
+            pRemFocus();
         };
     });
 
     return{
         focus(){
-            input.focus()
+            pInput.focus() 
         },
         getValue(){
-            return input.value
+            return pInput.value
         },
         setError(error){
-            errorText.innerText=error;
-            field.classList.add(INPUT_ERROR_CLASS);
+            popupErrorText.innerText=error;
+            popupInput.classList.add(POPUP_ERROR_CLASS);
         },
     };
 };
 
-const nameField= initializeField(nameInputWrapper);
-const emailField= initializeField(emailInputWrapper);
+const field1= initializeField(nameInputWrapper);
+const field2= initializeField(emailInputWrapper);
+const fields=[field1,field2];
 
 openButton.onclick=function(){
     popupToggle();
-    nameField.focus();
+    field1.focus();
 };
-closeButton.onclick=popupToggle;
+
+closeButton.onclick=function(){
+    popupToggle();
+    document.getElementById('prize-popup')[0].reset();
+};
 
 prizeForm.addEventListener('submit', function(event){
     event.preventDefault();
+    fields.forEach(el=>{
+        const popupValue=el.getValue();
 
-    const nameValue=nameField.getValue();
-    const emailValue=emailField.getValue();
+        if (!popupValue){
+           el.setError('не заполнено');
+           el.focus();
+           return;
+        }
+    });
 
-    if (!nameValue){
-       nameField.setError('не заполнено');
-       nameField.focus();
-       return;
-    }
-    if (!emailValue){
-        emailField.setError('не заполнено');
-        emailField.focus();
+    const emailValue=field2.getValue();
+
+    if(!/^[\w]{3,20}@[a-z 0-9]{4,8}|.[a-z]{2,3}$/.test(emailValue)){
+        field2.setError('некорректный email');
+        field2.focus();
         return;
-    }
+    };
+    
     if(prizeSelect.value==="none"){
-        prizeSelect.classList.add(INPUT_ERROR_CLASS);
+        prizeSelect.classList.add(POPUP_ERROR_CLASS);
         return;
-    }
+    };
     const data ={
-        name:nameValue,
-        email:emailValue,
+        name:nameInputWrapper.value,
+        email:emailInputWrapper.value,
         free:prizeSelect.value,
-    }
+    };
 
     const url=new URL('http://inno-ijl.ru/multystub/stc-21-03/feedback');
     url.search=new URLSearchParams(data).toString();

@@ -26,11 +26,11 @@
     <script defer src="/target/film.js"></script>
     <script defer src="/target/main.js"></script>
     <script defer src="/target/cinema_table.js"></script>
-    <script defer src="/target/cinema_popup.js"></script>
-    <script defer src="/target/feedback_form.js"></script>
-    <script defer src="/target/block_films.js"></script>
+    <script defer src="/js/cinema_popup.js"></script>
+    <script defer src="/js/feedback_form.js"></script>
+    <!-- <script defer src="/target/block_films.js"></script> -->
     <script defer src="/target/tdd-utils.js"></script>
-    <script defer src="/target/spread.js"></script>
+    <script defer src="/target/spread.js"></script> 
   </head>
   <body>
     <div class="cinematheatre">
@@ -698,13 +698,13 @@
     </section>
     <div class="container container__form">
       <div class="form"> 
-        <form id="feedback-form" class="form__content">
+        <form id="feedback-form" class="form__content" action="order.php" enctype="multipart/form-data">
           <h2 class="form__feedback-head">Обратная связь</h2>
           <div id="form-input" class="form__feedback">
-            <div class="form__input feedback__input-focus feedback__input-error">
+            <div class="form__input">
               <p class="form__feedback-label">Полное имя</p>
-              <input type="text" name="name"  class="form__feedback-input required" value="John"/>
-              <p class="form__input-error-msg">Error massage</p>
+              <input type="text" name="name"  class="form__feedback-input feedbacks required" value=""/>
+              <p class="form__error-msg"></p>
             </div>
           </div>
           <div class="form__feedback-select">
@@ -723,15 +723,15 @@
               <option value="10">10</option>
             </select>
           </div>
-          <div id="form-textarea" class="form__feedback">
-            <div class="form__textarea feedback__textarea-focus feedback__textarea-error">
+          <div id="form-input" class="form__feedback">
+            <div class="form__textarea">
               <p class="form__feedback-label2">Напишите отзыв</p>
-              <textarea class="form__feedback-textarea required" type="text" name="review"></textarea>
-              <p class="form__textarea-error-msg">Error massage</p>
+              <textarea class="form__feedback-textarea feedbacks required" type="text" name="review"></textarea>
+              <p class="form__error-msg"></p>
             </div>
           </div>
           <label class="form__feedback-check-label">
-            <input class="form__feedback-check-input" type="checkbox" name="checkdan" id="checkbox" required />
+            <input class="form__feedback-check-input" type="checkbox" name="checkdan" id="checkbox"/>
             <div class="form__feedback-check"></div>
             <p class="form__feedback-span">Я согласен на обработку своих персональных данных</p>
           </label>
@@ -923,7 +923,7 @@
         </div>
       </div>
     </footer>
-    <form id="prize-popup" class="popup hidden">
+    <form id="prize-popup" class="popup hidden" type="reset">
       <div class="popup__form">
         <div id="popup-close" class="popup__form-close">
           <svg width="35" height="35" viewBox="0 0 35 35" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -934,17 +934,17 @@
         <div class="popup__form-wrapper">
           <div class="popup__form-inputs">
             <div class="popup__form-input">
-              <div class="form__popup form__popup-focus form__popup-error">
+              <div class="form__popup">
                 <p class="form__popup-label">Полное имя</p>
-                <input type="text" name="name"  class="form__popup-input required" value="John"/>
-                <p class="form__popup-error-msg">Error massage</p>
+                <input type="text" name="name"  class="form__popup-input required" value=""/>
+                <p class="form__popup-error-msg"></p>
               </div>
             </div>
             <div class="popup__form-input">
-              <div class="form__popup form__popup-focus form__popup-error">
+              <div class="form__popup2">
                 <p class="form__popup-label">Email</p>
-                <input  type="text" name="email" class="form__popup-input required" value="name@email.com"/>
-                <p class="form__popup-error-msg">Error massage</p>
+                <input  type="text" name="email" class="form__popup-input required" value=""/>
+                <p class="form__popup-error-msg"></p>
               </div>
             </div>
           </div>
