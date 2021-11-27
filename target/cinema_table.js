@@ -46,3 +46,4 @@ for (var _i = 0, _films = films; _i < _films.length; _i++) {
     tbody.innerHTML += filmItem.renderFilmTableItem();
   }
 }
+//# sourceMappingURL=cinema_table.js.map

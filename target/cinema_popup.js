@@ -3,90 +3,118 @@
 var prizeForm = document.getElementById('prize-popup');
 var openButton = document.querySelector('#popup-open');
 var closeButton = document.querySelector('#popup-close');
-var nameInputWrapper = document.querySelector('#prize-popup input[name="name"]').parentNode;
-var emailInputWrapper = document.querySelector('#prize-popup input[name="email"]').parentNode;
+var nameInputWrapper = document.querySelector('.form__popup');
+var emailInputWrapper = document.querySelector('.form__popup2');
 var prizeSelect = document.querySelector('#prize');
-var ERROR_CLASS = 'form__popup-error';
-var FOCUS_CLASS = 'form__popup-focus';
+var POPUP_ERROR_CLASS = 'form__popup-error';
+var POPUP_FOCUS_CLASS = 'form__popup-focus';
 
 function popupToggle() {
   prizeForm.classList.toggle('hidden');
 }
 
-function initializeField() {
-  var popupInput = document.getElementsByTagName('input')[0];
-  var popupErrorText = document.querySelector('.form__popup-error-msg');
+function clearErrors(input) {
+  input.classList.remove(POPUP_ERROR_CLASS);
+}
 
-  function clearFocus() {
-    prizeForm.classList.remove(FOCUS_CLASS);
-    popupInput.value = '';
-  }
+function initializeField(popupInput) {
+  var pInput = popupInput.getElementsByTagName('input')[0];
+  var popupErrorText = popupInput.querySelector('.form__popup-error-msg');
 
-  clearFocus();
-
-  function clearError() {
-    prizeForm.classList.remove(ERROR_CLASS);
+  function pRemError() {
+    popupInput.classList.remove(POPUP_ERROR_CLASS);
     popupErrorText.innerText = '';
   }
 
   ;
-  popupInput.addEventListener('focus', function () {
-    prizeForm.classList.add(FOCUS_CLASS);
+  pRemError();
+
+  function pRemFocus() {
+    popupInput.classList.remove(POPUP_FOCUS_CLASS);
+    pInput.value = '';
+  }
+
+  ;
+  pInput.addEventListener('focus', function () {
+    popupInput.classList.add(POPUP_FOCUS_CLASS);
   });
-  popupInput.addEventListener('input', function () {
-    clearError();
+  pInput.addEventListener('input', function () {
+    pRemError();
   });
-  popupInput.addEventListener('blur', function () {
-    if (!popupInput.value) {
-      clearFocus();
+  pInput.addEventListener('blur', function () {
+    if (!pInput.value) {
+      pRemFocus();
     }
 
     ;
   });
   return {
     focus: function focus() {
-      prizeForm.classList.add(FOCUS_CLASS);
+      pInput.focus();
     },
     getValue: function getValue() {
-      return popupInput.value;
+      return pInput.value;
     },
     setError: function setError(error) {
       popupErrorText.innerText = error;
-      prizeForm.classList.add(ERROR_CLASS);
+      popupInput.classList.add(POPUP_ERROR_CLASS);
     }
   };
 }
 
 ;
-var Field = initializeField();
+var field1 = initializeField(nameInputWrapper);
+var field2 = initializeField(emailInputWrapper);
+var fields = [field1, field2];
 
 openButton.onclick = function () {
   popupToggle();
-  nameInputWrapper.focus();
+  field1.focus();
 };
 
-closeButton.onclick = popupToggle;
+closeButton.onclick = function () {
+  popupToggle();
+  document.getElementById('prize-popup').reset();
+  [nameInputWrapper, emailInputWrapper].forEach(function (el) {
+    clearErrors(el);
+    var errorText = el.querySelector('.form__popup-error-msg');
+    errorText.innerText = '';
+  });
+};
+
 prizeForm.addEventListener('submit', function (event) {
   event.preventDefault();
-  var popupValue = Field.getValue();
+  fields.forEach(function (el) {
+    var popupValue = el.getValue();
 
-  if (!popupValue) {
-    Field.setError('не заполнено');
-    Field.focus();
-    return;
+    if (!popupValue) {
+      el.setError('не заполнено');
+      el.focus();
+      return;
+    }
+  });
+  var emailValue = field2.getValue();
+
+  if (!/^[\w]{3,20}@[a-z 0-9]{4,8}|.[a-z]{2,3}$/.test(emailValue)) {
+    field2.setError('некорректный email');
+    field2.focus();
   }
+
+  ;
+  console.log(prizeSelect, 3);
 
   if (prizeSelect.value === "none") {
-    prizeSelect.classList.add(ERROR_CLASS);
-    return;
+    prizeSelect.classList.add(POPUP_ERROR_CLASS);
   }
 
+  ;
   var data = {
-    name: popupValue,
-    email: popupValue,
+    name: nameInputWrapper.value,
+    email: emailInputWrapper.value,
     free: prizeSelect.value
   };
   var url = new URL('http://inno-ijl.ru/multystub/stc-21-03/feedback');
   url.search = new URLSearchParams(data).toString();
   fetch(url.toString());
 });
+//# sourceMappingURL=cinema_popup.js.map

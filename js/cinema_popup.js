@@ -12,6 +12,9 @@ const POPUP_FOCUS_CLASS='form__popup-focus';
 function popupToggle(){
     prizeForm.classList.toggle('hidden');
 }
+function clearErrors(input){
+    input.classList.remove(POPUP_ERROR_CLASS);
+}
 function initializeField(popupInput){
     const pInput= popupInput.getElementsByTagName('input')[0];
     const popupErrorText= popupInput.querySelector('.form__popup-error-msg');
@@ -65,7 +68,12 @@ openButton.onclick=function(){
 
 closeButton.onclick=function(){
     popupToggle();
-    document.getElementById('prize-popup')[0].reset();
+    document.getElementById('prize-popup').reset();
+    [nameInputWrapper,emailInputWrapper].forEach(el=>{
+        clearErrors(el);
+        const errorText=el.querySelector('.form__popup-error-msg');
+        errorText.innerText='';
+    });
 };
 
 prizeForm.addEventListener('submit', function(event){
@@ -85,12 +93,10 @@ prizeForm.addEventListener('submit', function(event){
     if(!/^[\w]{3,20}@[a-z 0-9]{4,8}|.[a-z]{2,3}$/.test(emailValue)){
         field2.setError('некорректный email');
         field2.focus();
-        return;
     };
-    
+    console.log(prizeSelect,3)
     if(prizeSelect.value==="none"){
         prizeSelect.classList.add(POPUP_ERROR_CLASS);
-        return;
     };
     const data ={
         name:nameInputWrapper.value,

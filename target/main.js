@@ -19,3 +19,4 @@ $(document).ready(function () {
     center: true
   });
 });
+//# sourceMappingURL=main.js.map
