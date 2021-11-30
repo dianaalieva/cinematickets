@@ -8,7 +8,8 @@
     <link rel="stylesheet" href="/css/style.css">
     <link rel="stylesheet" href="/css/common_styles.css"/>
     <link rel="stylesheet" href="/css/media_rules.css">
-
+    
+    <script defer src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script defer src="/libs/polyfill.min.js"></script>
     <script defer src="/target/utils.js"></script>
 
@@ -187,29 +188,29 @@
   </div>
   <div class="cinematheatre__block">
     <div class="cinematheatre__block-left">
-      <img class="cinematheatre__block-img" src="/images/cinema__block-img.png">
+      <img id="single__poster" class="cinematheatre__block-img" src="/images/cinema__block-img.png" alt="">
     </div>
     <div class="cinematheatre__block-line"></div>
     <div class="cinematheatre__block-right">
-      <div class="cinematheatre__block-name">Живое</div>
+      <div id="single__header" class="cinematheatre__block-name">Loading</div>
       <div class="cinematheatre__block-row1">
         <div class="block__div1">
-          <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <path d="M7.9925 0.5C3.8525 0.5 0.5 3.86 0.5 8C0.5 12.14 3.8525 15.5 7.9925 15.5C12.14 15.5 15.5 12.14 15.5 8C15.5 3.86 12.14 0.5 7.9925 0.5ZM11.1725 12.5L8 10.5875L4.8275 12.5L5.6675 8.8925L2.87 6.47L6.56 6.155L8 2.75L9.44 6.1475L13.13 6.4625L10.3325 8.885L11.1725 12.5Z" fill="#A3CC40"/>
+          <svg data-rating-value="1" class="single__rating-star" width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path fill="currentColor" d="M7.9925 0.5C3.8525 0.5 0.5 3.86 0.5 8C0.5 12.14 3.8525 15.5 7.9925 15.5C12.14 15.5 15.5 12.14 15.5 8C15.5 3.86 12.14 0.5 7.9925 0.5ZM11.1725 12.5L8 10.5875L4.8275 12.5L5.6675 8.8925L2.87 6.47L6.56 6.155L8 2.75L9.44 6.1475L13.13 6.4625L10.3325 8.885L11.1725 12.5Z"/>
           </svg>
-          <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <path d="M7.9925 0.5C3.8525 0.5 0.5 3.86 0.5 8C0.5 12.14 3.8525 15.5 7.9925 15.5C12.14 15.5 15.5 12.14 15.5 8C15.5 3.86 12.14 0.5 7.9925 0.5ZM11.1725 12.5L8 10.5875L4.8275 12.5L5.6675 8.8925L2.87 6.47L6.56 6.155L8 2.75L9.44 6.1475L13.13 6.4625L10.3325 8.885L11.1725 12.5Z" fill="#A3CC40"/>
+          <svg data-rating-value="1" class="single__rating-star" width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path fill="currentColor" d="M7.9925 0.5C3.8525 0.5 0.5 3.86 0.5 8C0.5 12.14 3.8525 15.5 7.9925 15.5C12.14 15.5 15.5 12.14 15.5 8C15.5 3.86 12.14 0.5 7.9925 0.5ZM11.1725 12.5L8 10.5875L4.8275 12.5L5.6675 8.8925L2.87 6.47L6.56 6.155L8 2.75L9.44 6.1475L13.13 6.4625L10.3325 8.885L11.1725 12.5Z"/>
           </svg>
-          <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <path d="M7.9925 0.5C3.8525 0.5 0.5 3.86 0.5 8C0.5 12.14 3.8525 15.5 7.9925 15.5C12.14 15.5 15.5 12.14 15.5 8C15.5 3.86 12.14 0.5 7.9925 0.5ZM11.1725 12.5L8 10.5875L4.8275 12.5L5.6675 8.8925L2.87 6.47L6.56 6.155L8 2.75L9.44 6.1475L13.13 6.4625L10.3325 8.885L11.1725 12.5Z" fill="#A3CC40"/>
+          <svg data-rating-value="1" class="single__rating-star" width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path fill="currentColor" d="M7.9925 0.5C3.8525 0.5 0.5 3.86 0.5 8C0.5 12.14 3.8525 15.5 7.9925 15.5C12.14 15.5 15.5 12.14 15.5 8C15.5 3.86 12.14 0.5 7.9925 0.5ZM11.1725 12.5L8 10.5875L4.8275 12.5L5.6675 8.8925L2.87 6.47L6.56 6.155L8 2.75L9.44 6.1475L13.13 6.4625L10.3325 8.885L11.1725 12.5Z"/>
           </svg>
-          <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <path d="M7.9925 0.5C3.8525 0.5 0.5 3.86 0.5 8C0.5 12.14 3.8525 15.5 7.9925 15.5C12.14 15.5 15.5 12.14 15.5 8C15.5 3.86 12.14 0.5 7.9925 0.5ZM11.1725 12.5L8 10.5875L4.8275 12.5L5.6675 8.8925L2.87 6.47L6.56 6.155L8 2.75L9.44 6.1475L13.13 6.4625L10.3325 8.885L11.1725 12.5Z" fill="#A3CC40"/>
+          <svg data-rating-value="1" class="single__rating-star" width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path fill="currentColor" d="M7.9925 0.5C3.8525 0.5 0.5 3.86 0.5 8C0.5 12.14 3.8525 15.5 7.9925 15.5C12.14 15.5 15.5 12.14 15.5 8C15.5 3.86 12.14 0.5 7.9925 0.5ZM11.1725 12.5L8 10.5875L4.8275 12.5L5.6675 8.8925L2.87 6.47L6.56 6.155L8 2.75L9.44 6.1475L13.13 6.4625L10.3325 8.885L11.1725 12.5Z"/>
           </svg>
-          <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <path d="M7.9925 0.5C3.8525 0.5 0.5 3.86 0.5 8C0.5 12.14 3.8525 15.5 7.9925 15.5C12.14 15.5 15.5 12.14 15.5 8C15.5 3.86 12.14 0.5 7.9925 0.5ZM11.1725 12.5L8 10.5875L4.8275 12.5L5.6675 8.8925L2.87 6.47L6.56 6.155L8 2.75L9.44 6.1475L13.13 6.4625L10.3325 8.885L11.1725 12.5Z" fill="#A3CC40"/>
+          <svg data-rating-value="1" class="single__rating-star" width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path fill="currentColor" d="M7.9925 0.5C3.8525 0.5 0.5 3.86 0.5 8C0.5 12.14 3.8525 15.5 7.9925 15.5C12.14 15.5 15.5 12.14 15.5 8C15.5 3.86 12.14 0.5 7.9925 0.5ZM11.1725 12.5L8 10.5875L4.8275 12.5L5.6675 8.8925L2.87 6.47L6.56 6.155L8 2.75L9.44 6.1475L13.13 6.4625L10.3325 8.885L11.1725 12.5Z"/>
           </svg>
-          <div class="block__row-one">5.0</div>
+          <div id="single__rating-score" class="block__row-one">5.0</div>
         </div>
         <div class="block__div2">
           <div class="block__row-two">9/10</div>
@@ -228,16 +229,16 @@
           <svg width="12" height="8" viewBox="0 0 12 8" fill="none" xmlns="http://www.w3.org/2000/svg">
             <path d="M6 0.25C3.5 0.25 1.365 1.805 0.5 4C1.365 6.195 3.5 7.75 6 7.75C8.5 7.75 10.635 6.195 11.5 4C10.635 1.805 8.5 0.25 6 0.25ZM6 6.5C4.62 6.5 3.5 5.38 3.5 4C3.5 2.62 4.62 1.5 6 1.5C7.38 1.5 8.5 2.62 8.5 4C8.5 5.38 7.38 6.5 6 6.5ZM6 2.5C5.17 2.5 4.5 3.17 4.5 4C4.5 4.83 5.17 5.5 6 5.5C6.83 5.5 7.5 4.83 7.5 4C7.5 3.17 6.83 2.5 6 2.5Z" fill="#A3CC40"/>
           </svg>
-          <div class="block__rows-info">2.5K Views</div>
+          <div id="single__views" class="block__rows-info">Loading...</div>
         </div>
         <div class="block__rows">
-          <svg width="10" height="10" viewBox="0 0 10 10" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <path d="M5 9.675L4.275 9.015C1.7 6.68 0 5.14 0 3.25C0 1.71 1.21 0.5 2.75 0.5C3.62 0.5 4.455 0.905 5 1.545C5.545 0.905 6.38 0.5 7.25 0.5C8.79 0.5 10 1.71 10 3.25C10 5.14 8.3 6.68 5.725 9.02L5 9.675Z" fill="#A3CC40"/>
+          <svg id="single__heart" class="single_heart" width="10" height="10" viewBox="0 0 10 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path fill="currentColor" d="M5 9.675L4.275 9.015C1.7 6.68 0 5.14 0 3.25C0 1.71 1.21 0.5 2.75 0.5C3.62 0.5 4.455 0.905 5 1.545C5.545 0.905 6.38 0.5 7.25 0.5C8.79 0.5 10 1.71 10 3.25C10 5.14 8.3 6.68 5.725 9.02L5 9.675Z"/>
           </svg>
-          <div class="block__rows-info">200 Likes</div>
+          <div id="single__likes" class="block__rows-info">Loading...</div>
         </div>
       </div>
-      <div class="cinematheatre__block-row3">Lorem, ipsum dolor sit amet consectetur adipisicing elit. 
+      <div id="single__desc" class="cinematheatre__block-row3">Lorem, ipsum dolor sit amet consectetur adipisicing elit. 
         Itaque voluptatum ipsam, harum aut pariatur temporibus voluptates quis distinctio quasi 
         ullam voluptate doloribus eos, iure vero illo quaerat! Nobis, neque necessitatibus!
       </div>

@@ -289,6 +289,9 @@ html {
   .table__column_check {
     padding-left: 1.25rem;
   }
+  .table__check{
+    display: none;
+  }
   .table__column_time {
     color: white;
   }
@@ -1023,6 +1026,10 @@ html {
     right: 0.7rem;
     top: 0.7rem;
   }
+  .popup__form-close svg{
+    width: 1.75rem;
+    height: 1.75rem;
+  }
   .popup__form-input{
     padding:0.5rem 0 0;
   }
@@ -1083,6 +1090,10 @@ html {
     text-align: left;
     color: #333333;
     padding-bottom: 1.1rem;
+  }
+  .cinematheatre__block-img{
+    width: 25.55rem;
+    height: 25.55rem;
   }
   .cinematheatre__block-row1{
     display: flex;
@@ -1238,6 +1249,80 @@ html {
     text-align: left;
     color: #333333;
     padding-top: 0.25rem;
+  }
+  .single__rating-star{
+    cursor: pointer;
+    color:olivedrab;
+  }
+  .rating__star-selected{
+    color:#A3CC40;
+  }
+  .single__rating-star:hover{
+    color:#A3CC40;
+  }
+  .block__div1:hover .single__rating-star{
+    color:#A3CC40;
+  }
+  .single__rating-star:hover ~ .single__rating-star{
+    color:olivedrab;
+  }
+  .single__heart{
+    color: olivedrab;
+    cursor: pointer;
+  }
+  .single__heart-leked{
+    color: #A3CC40;
+  }
+  .scroll__up{
+    position: fixed;
+    transform: rotate(+90deg);
+    color: gray;
+    width: 1.5rem;
+    height: 1.5rem;
+    right: 1rem;
+    bottom: 3rem;
+  }
+  .catalog__sceleton{
+    height: 14.15rem;
+    animation: shine-sceleton 1.6s infinite linear;
+  }
+  .catalog__sceleton:nth-child(1){
+    animation-delay: -.1s;
+  }
+  .catalog__sceleton:nth-child(2){
+    animation-delay: -.2s;
+  }
+  .catalog__sceleton:nth-child(3){
+    animation-delay: -.3s;
+  }
+  .catalog__sceleton:nth-child(4){
+    animation-delay: -.4s;
+  }
+  .catalog__sceleton:nth-child(5){
+    animation-delay: -.5s;
+  }
+  .catalog__sceleton:nth-child(6){
+    animation-delay: -.6s;
+  }
+  .catalog__sceleton:nth-child(7){
+    animation-delay: -.7s;
+  }
+  .catalog__sceleton:nth-child(8){
+    animation-delay: -.8s;
+  }
+  .catalog__sceleton:nth-child(9){
+    animation-delay: -.9s;
+  }
+  @keyframes shine-sceleton{
+    0%{
+      background-color:grey;
+    }
+    50%{
+      background-color: #ffffff;
+    }
+    100%{
+      background-color:grey;
+    }
   }
 
 

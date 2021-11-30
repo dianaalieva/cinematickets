@@ -19,4 +19,9 @@ $(document).ready(function () {
     center: true
   });
 });
+$('.scroll__up').on('click', function () {
+  $('html').animate({
+    scrollTop: 0
+  }, 3000);
+});
 //# sourceMappingURL=main.js.map

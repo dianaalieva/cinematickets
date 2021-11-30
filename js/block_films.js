@@ -1,10 +1,9 @@
 const API_TOKEN='08b36bd4-4230-423f-9857-06ae35b0098d';
 const cinemaCatalogWrapper = document.getElementById('cinema-catalog');
-cinemaCatalogWrapper.innerHTML='';
 
-const renderFilmBlock = (title,posterUrl,id)=>{ 
+const renderFilmBlock = (title,posterUrl,filmId)=>{ 
     const filmLink=document.createElement('a');
-    filmLink.href=`/single/?id=${id}`;
+    filmLink.href=`/single/single.html?id=${filmId}`;
 
     const filmWrapper=document.createElement('div');
     filmWrapper.classList.add('catalog__image','catalog__image5');
@@ -37,26 +36,30 @@ const getBlockFilmsData=async()=>{
         const requests=[];
         const filmsLayout=new Map();
 
-        data.films.forEach(async(film) => { 
-            const[filmBlock,description] = renderFilmBlock(film.nameRu,film.posterUrlPreview,film.filmId);
-            filmsLayout.set(film.filmId,filmBlock);
+        data.films.forEach(async(film,i) => { 
+            const[filmWrapper,filmDescription] = renderFilmBlock(film.nameRu,film.posterUrlPreview,film.filmId);
+            filmsLayout.set(film.filmId,filmWrapper);
 
-            requests.push(new Promise(async(resolve)=>{
-                try{
-                    const answer=await getFilmDetails(film.filmId);
-                    const filmData=await answer.json();
-
-                    description.textContent=filmData.filmDescription;
-                    if(!filmData.filmDescription){
-                        filmsLayout.delete(film.filmId);
-                    };
-                }catch(error){
-                }
-                resolve();
+            requests.push(new Promise((resolve,reject)=>{
+                setTimeout(async()=>{
+                    try{
+                        const answer=await getFilmDetails(film.filmId);
+                        const filmData=await answer.json();
+    
+                        filmDescription.textContent=filmData.description;
+                        if(!filmData.description){
+                            filmsLayout.delete(film.filmId);
+                        };
+                    }catch(error){
+                    }
+                    resolve();
+                },i*100);
+               
             }));
         });
         await Promise.all(requests);
-
+        
+        cinemaCatalogWrapper.innerHTML='';
         let i=0;
         for(const[,filmLayout] of filmsLayout){
             cinemaCatalogWrapper.append(filmLayout);

@@ -20,11 +20,10 @@ function _asyncToGenerator(fn) { return function () { var self = this, args = ar
 
 var API_TOKEN = '08b36bd4-4230-423f-9857-06ae35b0098d';
 var cinemaCatalogWrapper = document.getElementById('cinema-catalog');
-cinemaCatalogWrapper.innerHTML = '';
 
-var renderFilmBlock = function renderFilmBlock(title, posterUrl, id) {
+var renderFilmBlock = function renderFilmBlock(title, posterUrl, filmId) {
   var filmLink = document.createElement('a');
-  filmLink.href = "/single/?id=".concat(id);
+  filmLink.href = "/single/single.html?id=".concat(filmId);
   var filmWrapper = document.createElement('div');
   filmWrapper.classList.add('catalog__image', 'catalog__image5');
   var filmPoster = document.createElement('img');
@@ -66,17 +65,17 @@ var getBlockFilmsData = /*#__PURE__*/function () {
             requests = [];
             filmsLayout = new Map();
             data.films.forEach( /*#__PURE__*/function () {
-              var _ref2 = _asyncToGenerator( /*#__PURE__*/regeneratorRuntime.mark(function _callee2(film) {
-                var _renderFilmBlock, _renderFilmBlock2, filmBlock, description;
+              var _ref2 = _asyncToGenerator( /*#__PURE__*/regeneratorRuntime.mark(function _callee2(film, i) {
+                var _renderFilmBlock, _renderFilmBlock2, filmWrapper, filmDescription;
 
                 return regeneratorRuntime.wrap(function _callee2$(_context2) {
                   while (1) {
                     switch (_context2.prev = _context2.next) {
                       case 0:
-                        _renderFilmBlock = renderFilmBlock(film.nameRu, film.posterUrlPreview, film.filmId), _renderFilmBlock2 = _slicedToArray(_renderFilmBlock, 2), filmBlock = _renderFilmBlock2[0], description = _renderFilmBlock2[1];
-                        filmsLayout.set(film.filmId, filmBlock);
-                        requests.push(new Promise( /*#__PURE__*/function () {
-                          var _ref3 = _asyncToGenerator( /*#__PURE__*/regeneratorRuntime.mark(function _callee(resolve) {
+                        _renderFilmBlock = renderFilmBlock(film.nameRu, film.posterUrlPreview, film.filmId), _renderFilmBlock2 = _slicedToArray(_renderFilmBlock, 2), filmWrapper = _renderFilmBlock2[0], filmDescription = _renderFilmBlock2[1];
+                        filmsLayout.set(film.filmId, filmWrapper);
+                        requests.push(new Promise(function (resolve, reject) {
+                          setTimeout( /*#__PURE__*/_asyncToGenerator( /*#__PURE__*/regeneratorRuntime.mark(function _callee() {
                             var _answer, filmData;
 
                             return regeneratorRuntime.wrap(function _callee$(_context) {
@@ -94,9 +93,9 @@ var getBlockFilmsData = /*#__PURE__*/function () {
 
                                   case 6:
                                     filmData = _context.sent;
-                                    description.textContent = filmData.filmDescription;
+                                    filmDescription.textContent = filmData.description;
 
-                                    if (!filmData.filmDescription) {
+                                    if (!filmData.description) {
                                       filmsLayout["delete"](film.filmId);
                                     }
 
@@ -117,12 +116,8 @@ var getBlockFilmsData = /*#__PURE__*/function () {
                                 }
                               }
                             }, _callee, null, [[0, 12]]);
-                          }));
-
-                          return function (_x2) {
-                            return _ref3.apply(this, arguments);
-                          };
-                        }()));
+                          })), i * 100);
+                        }));
 
                       case 3:
                       case "end":
@@ -132,7 +127,7 @@ var getBlockFilmsData = /*#__PURE__*/function () {
                 }, _callee2);
               }));
 
-              return function (_x) {
+              return function (_x, _x2) {
                 return _ref2.apply(this, arguments);
               };
             }());
@@ -140,15 +135,16 @@ var getBlockFilmsData = /*#__PURE__*/function () {
             return Promise.all(requests);
 
           case 12:
+            cinemaCatalogWrapper.innerHTML = '';
             i = 0;
             _iterator = _createForOfIteratorHelper(filmsLayout);
-            _context3.prev = 14;
+            _context3.prev = 15;
 
             _iterator.s();
 
-          case 16:
+          case 17:
             if ((_step = _iterator.n()).done) {
-              _context3.next = 25;
+              _context3.next = 26;
               break;
             }
 
@@ -157,52 +153,52 @@ var getBlockFilmsData = /*#__PURE__*/function () {
             i++;
 
             if (!(i === 9)) {
-              _context3.next = 22;
+              _context3.next = 23;
               break;
             }
 
-            return _context3.abrupt("break", 25);
-
-          case 22:
-            ;
+            return _context3.abrupt("break", 26);
 
           case 23:
-            _context3.next = 16;
+            ;
+
+          case 24:
+            _context3.next = 17;
             break;
 
-          case 25:
-            _context3.next = 30;
+          case 26:
+            _context3.next = 31;
             break;
 
-          case 27:
-            _context3.prev = 27;
-            _context3.t0 = _context3["catch"](14);
+          case 28:
+            _context3.prev = 28;
+            _context3.t0 = _context3["catch"](15);
 
             _iterator.e(_context3.t0);
 
-          case 30:
-            _context3.prev = 30;
+          case 31:
+            _context3.prev = 31;
 
             _iterator.f();
 
-            return _context3.finish(30);
+            return _context3.finish(31);
 
-          case 33:
+          case 34:
             ;
-            _context3.next = 39;
+            _context3.next = 40;
             break;
 
-          case 36:
-            _context3.prev = 36;
+          case 37:
+            _context3.prev = 37;
             _context3.t1 = _context3["catch"](0);
             console.error(_context3.t1);
 
-          case 39:
+          case 40:
           case "end":
             return _context3.stop();
         }
       }
-    }, _callee3, null, [[0, 36], [14, 27, 30, 33]]);
+    }, _callee3, null, [[0, 37], [15, 28, 31, 34]]);
   }));
 
   return function getBlockFilmsData() {
